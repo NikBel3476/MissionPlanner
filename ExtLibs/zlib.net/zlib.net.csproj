@@ -29,7 +29,7 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile />
     <NoStdLib>false</NoStdLib>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net8.0</TargetFrameworks>
     <PreBuildEvent />
     <PostBuildEvent />
     <PreBuildEvent />

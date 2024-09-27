@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFrameworks>net8.0</TargetFrameworks>
     <ApplicationIcon />
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <StartupObject>DriverCleanup.Program</StartupObject>

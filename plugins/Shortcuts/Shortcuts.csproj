@@ -1,16 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFrameworks>net8.0</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>
+    <!--<WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>-->
 	  <NoWarn>1701;1702;NU1605</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>
+    <!--<WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>-->
 	  <NoWarn>1701;1702;NU1605</NoWarn>
   </PropertyGroup>
 

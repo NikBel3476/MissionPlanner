@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFrameworks>net8.0</TargetFrameworks>
     <ApplicationIcon>mpdesktop.ico</ApplicationIcon>
     <OutputType>Exe</OutputType>
     <StartupObject>MissionPlanner.Program</StartupObject>
@@ -42,13 +42,13 @@
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
-    <WarningsAsErrors>$(WarningsAsErrors);</WarningsAsErrors>
+    <!--<WarningsAsErrors>$(WarningsAsErrors);</WarningsAsErrors>-->
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\Release\net461\</OutputPath>
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
     <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
-    <WarningsAsErrors>$(WarningsAsErrors);</WarningsAsErrors>
+    <!--<WarningsAsErrors>$(WarningsAsErrors);</WarningsAsErrors>-->
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="APMPlannerXplanes\**" />

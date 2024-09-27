@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">  <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFrameworks>net8.0</TargetFrameworks>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <Prefer32Bit>false</Prefer32Bit>
-    <WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>
+    <!--<WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>-->
 		<NoWarn>1701;1702;NU1605</NoWarn>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -43,7 +43,7 @@
 		<ErrorReport>prompt</ErrorReport>
 		<WarningLevel>4</WarningLevel>
 		<Prefer32Bit>false</Prefer32Bit>
-		<WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>
+		<!--<WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>-->
 		<NoWarn>1701;1702;NU1605</NoWarn>
   </PropertyGroup>
   <ItemGroup>
