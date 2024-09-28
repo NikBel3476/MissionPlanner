@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.Drawing.Internal;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -158,7 +160,7 @@ namespace MissionPlanner.Log
                             a++;
                         }
 
-                        map.Save(logfile + ".jpg", SKEncodedImageFormat.Jpeg);
+                        map.Save(logfile + ".jpg", ImageFormat.Jpeg/*SKEncodedImageFormat.Jpeg*/);
 
                         File.SetLastWriteTime(logfile + ".jpg", new FileInfo(logfile).LastWriteTime);
                     }
@@ -185,16 +187,16 @@ namespace MissionPlanner.Log
 
             AddTextToMap(grap, text);
 
-            map.Save(jpgname, SKEncodedImageFormat.Jpeg);
+            map.Save(jpgname, ImageFormat.Jpeg/*SKEncodedImageFormat.Jpeg*/);
 
             map.Dispose();
 
             map = null;
         }
 
-        static void AddTextToMap(Graphics grap, string text)
+        static void AddTextToMap(System.Drawing.Graphics grap, string text)
         {
-            grap.DrawString(text, SystemFonts.DefaultFont, Brushes.Red, 0, 0, StringFormat.GenericDefault);
+            grap.DrawString(text, System.Drawing.SystemFonts.DefaultFont, System.Drawing.Brushes.Red, 0, 0, System.Drawing.StringFormat.GenericDefault);
         }
 
         static PointF GetPixel(RectLatLng area, PointLatLngAlt loc, Size size)

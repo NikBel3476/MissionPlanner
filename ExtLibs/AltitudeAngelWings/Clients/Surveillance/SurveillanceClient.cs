@@ -6,6 +6,7 @@ using AltitudeAngelWings.Service;
 using Flurl;
 using Flurl.Http;
 using Flurl.Http.Configuration;
+using System.Net.Http;
 
 namespace AltitudeAngelWings.Clients.Surveillance
 {

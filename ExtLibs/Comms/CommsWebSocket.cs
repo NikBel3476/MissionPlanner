@@ -126,7 +126,7 @@ namespace MissionPlanner.Comms
         private int readCursor = 0;
         SemaphoreSlim clientSemaphoreSlim = new SemaphoreSlim(1);
 
-        private async void RunReader()
+        private async Task RunReader()
         {
             while (IsOpen)
             {
@@ -189,7 +189,7 @@ namespace MissionPlanner.Comms
         private bool socketio = false;
         private string _url;
 
-        private async void Open(string url)
+        private async Task Open(string url)
         {
             _url = url;
             client = new ClientWebSocket();

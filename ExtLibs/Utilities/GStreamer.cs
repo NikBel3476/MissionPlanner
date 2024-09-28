@@ -32,9 +32,9 @@ namespace MissionPlanner.Utilities
 
         static object _lock = new object();
 
-        private static event EventHandler<Bitmap> _onNewImage;
+        private static event EventHandler<System.Drawing.Bitmap> _onNewImage;
 
-        public static event EventHandler<Bitmap> onNewImage
+        public static event EventHandler<System.Drawing.Bitmap> onNewImage
         {
             add { _onNewImage += value; }
             remove { _onNewImage -= value; }
@@ -1401,7 +1401,7 @@ namespace MissionPlanner.Utilities
                             var info = new GstMapInfo();
                             if (NativeMethods.gst_buffer_map(buffer, out info, GstMapFlags.GST_MAP_READ))
                             {
-                                var image = new Bitmap(Width, Height, 4 * Width, SkiaSharp.SKColorType.Bgra8888,
+                                var image = new System.Drawing.Bitmap(Width, Height, 4 * Width, (PixelFormat)SkiaSharp.SKColorType.Bgra8888,
                                     info.data);
 
                                 _onNewImage?.Invoke(null, image);
@@ -1897,7 +1897,7 @@ namespace MissionPlanner.Utilities
         static int width = 0;
 
         private static byte[] buffer;
-        private static Bitmap img;
+        private static System.Drawing.Bitmap img;
 
         public static int readRTPData(Stream stream, MemoryStream ms)
         {
@@ -1969,12 +1969,12 @@ namespace MissionPlanner.Utilities
                             try
                             {
                                 if (img == null || img.Width < width || img.Height < header.lineno + 1)
-                                    img = new Bitmap(width, header.lineno + 1, SKColorType.Bgra8888);
+                                    img = new System.Drawing.Bitmap(width, header.lineno + 1, (PixelFormat)SKColorType.Bgra8888);
 
                                 lock (img)
                                 {
-                                    BitmapData bmpData = img.LockBits(new Rectangle(0, 0, img.Width, img.Height),
-                                        ImageLockMode.WriteOnly, img.PixelFormat);
+                                    System.Drawing.Imaging.BitmapData bmpData = img.LockBits(new Rectangle(0, 0, img.Width, img.Height),
+                                        System.Drawing.Imaging.ImageLockMode.WriteOnly, img.PixelFormat);
 
                                     IntPtr ptr = bmpData.Scan0;
 
@@ -2072,11 +2072,11 @@ namespace MissionPlanner.Utilities
                     ms.Seek(0, SeekOrigin.Begin);
                     try
                     {
-                        var temp = Bitmap.FromStream(ms);
+                        var temp = System.Drawing.Bitmap.FromStream(ms);
 
                         //File.WriteAllBytes(tempno + ".bmp", ms.ToArray());
 
-                        _onNewImage?.Invoke(null, temp);
+                        _onNewImage?.Invoke(null, new Bitmap(temp));
 
                         tempno++;
                         persecond++;

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <StartupObject>SkiaTest.Program</StartupObject>
     <NoWin32Manifest>true</NoWin32Manifest>

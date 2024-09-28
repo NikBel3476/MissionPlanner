@@ -21,8 +21,8 @@ namespace MissionPlanner.Utilities
         LibVLCLibrary.libvlc_video_format_cb vlc_video_format_delegate;
         LibVLCLibrary.libvlc_video_cleanup_cb vlc_video_cleanup_delegate;
 
-        private static event EventHandler<Bitmap> _onNewImage;
-        public static event EventHandler<Bitmap> onNewImage
+        private static event EventHandler<System.Drawing.Bitmap> _onNewImage;
+        public static event EventHandler<System.Drawing.Bitmap> onNewImage
         {
             add { _onNewImage += value; }
             remove { _onNewImage -= value; }
@@ -139,7 +139,8 @@ namespace MissionPlanner.Utilities
 
         private void vlc_picture(IntPtr opaque, IntPtr picture)
         {
-            var image = (Bitmap)new Bitmap(Width, Height, 4 * Width, SKColorType.Bgra8888, picture).Clone();
+            // TODO: figure out SKColorType conversion
+            var image = (Bitmap)new Bitmap(Width, Height, 4 * Width, (System.Drawing.Imaging.PixelFormat)SKColorType.Bgra8888, picture).Clone();
 
             _onNewImage?.Invoke(this, image);
         }

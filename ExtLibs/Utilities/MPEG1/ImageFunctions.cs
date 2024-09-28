@@ -10,7 +10,7 @@ namespace MPEGBuilder1UI
 	{
 		// Class of functions to manipulate any image into a
 		// format that can be MPEG encoded
-		private Bitmap img;
+		private System.Drawing.Bitmap img;
 
 		public ImageFunctions()
 		{
@@ -19,7 +19,7 @@ namespace MPEGBuilder1UI
 			//
 		}
 
-		public void setImage(Bitmap imgIn)
+		public void setImage(System.Drawing.Bitmap imgIn)
 		{
 			img = imgIn;
 		}
@@ -31,7 +31,7 @@ namespace MPEGBuilder1UI
 		}
 			
 
-		public void padWidth(Bitmap img1)
+		public void padWidth(System.Drawing.Bitmap img1)
 		{
 			int i, j;
 			int fillW;
@@ -46,7 +46,7 @@ namespace MPEGBuilder1UI
 					img1.SetPixel(j, i, Color.LightGray);
 		}
 
-		public void padHeight(Bitmap img1)
+		public void padHeight(System.Drawing.Bitmap img1)
 		{
 			int i, j;
 			int fillH;

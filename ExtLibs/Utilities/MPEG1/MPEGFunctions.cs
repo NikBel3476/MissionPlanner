@@ -7,7 +7,7 @@ namespace BitmapImage
 {
 	public class test
     {	
-		Bitmap Image = new Bitmap(1920,1080);
+		System.Drawing.Bitmap Image = new System.Drawing.Bitmap(1920,1080);
 	
 		private long outBytes = 0;
 		public int nPictures = 1;
@@ -45,7 +45,7 @@ namespace BitmapImage
 			MPEGFunctions MPEG = new MPEGFunctions();
 
 			// Retrieve image from pictureBox1
-			Bitmap img = new Bitmap(Image);
+			System.Drawing.Bitmap img = new System.Drawing.Bitmap(Image);
 			imageBytes = img.Height * img.Width * 3;
 			
             // Create output file and Memory Stream to write encoded image to
@@ -816,7 +816,7 @@ namespace BitmapImage
 
 		// Function to get the Y values for an RGB macroblock
 		// pointed to by [vblock,hblock] out of Bitmap img
-		public byte[,] getYMatrix(Bitmap img, int vblock, int hblock)
+		public byte[,] getYMatrix(System.Drawing.Bitmap img, int vblock, int hblock)
 		{
 			int i, j;
 			double tempdouble;
@@ -836,7 +836,7 @@ namespace BitmapImage
 		// Function to get the CR values for an RGB macroblock
 		// pointed to by [vblock,hblock] out of Bitmap img
 		// In MPEG1, use subsampling to make one 8x8 block of Pr values
-		public byte[,] getCRMatrix(Bitmap img, int vblock, int hblock)
+		public byte[,] getCRMatrix(System.Drawing.Bitmap img, int vblock, int hblock)
 		{
 			int i, j;
 			double tempdouble;
@@ -856,7 +856,7 @@ namespace BitmapImage
 		// Function to get the CB values for an RGB macroblock
 		// pointed to by [vblock,hblock] out of Bitmap img
 		// In MPEG1, use subsampling to make one 8x8 block of Pb values
-		public byte[,] getCBMatrix(Bitmap img, int vblock, int hblock)
+		public byte[,] getCBMatrix(System.Drawing.Bitmap img, int vblock, int hblock)
 		{
 			int i, j;
 			double tempdouble;

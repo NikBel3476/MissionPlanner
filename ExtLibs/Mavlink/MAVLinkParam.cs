@@ -149,11 +149,11 @@ item.float_value
             switch (Type)
             {
                 case MAV_PARAM_TYPE.UINT8:
-                    data = BitConverter.GetBytes((byte)input);
+                    data = BitConverter.GetBytes((ushort)input);
                     Array.Resize(ref _data, 4);
                     break;
                 case MAV_PARAM_TYPE.INT8:
-                    data = BitConverter.GetBytes((sbyte)input);
+                    data = BitConverter.GetBytes((short)input);
                     Array.Resize(ref _data, 4);
                     break;
                 case MAV_PARAM_TYPE.UINT16:

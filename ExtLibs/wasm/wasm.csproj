@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-   <TargetFrameworks>net8.0</TargetFrameworks>
+   <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
 
 		
     <RazorLangVersion>3.0</RazorLangVersion>
@@ -38,13 +38,13 @@
     <PackageReference Include="Blazor.Extensions.Storage" Version="1.1.0-preview3" />
     <PackageReference Include="Blazor.Extensions.WebUSB" Version="1.1.0-preview1" />
     <PackageReference Include="DotNetZip" Version="1.16.0" />
-    <PackageReference Include="Excubo.Blazor.Canvas" Version="3.2.40" />
-    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="Excubo.Blazor.Canvas" Version="3.2.60" />
+    <PackageReference Include="log4net" Version="3.0.1" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
     <PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.8" />
     <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.2.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Reshiru.Blazor.IndexedDB.Framework" Version="1.0.1" />
@@ -54,7 +54,7 @@
     <PackageReference Include="System.Text.Encoding" Version="4.3.0" />
     <PackageReference Include="System.Text.Encoding.Extensions" Version="4.3.0" />
     <PackageReference Include="Tewr.Blazor.FileReader" Version="3.3.2.23201" />
-    <PackageReference Include="Tewr.BlazorWorker.BackgroundService" Version="4.0.0" />
+    <PackageReference Include="Tewr.BlazorWorker.BackgroundService" Version="4.1.2" />
     <PackageReference Include="Toolbelt.Blazor.SpeechSynthesis" Version="10.3.1" />
     <PackageReference Include="WebGLDotNET" Version="2.1.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
