@@ -43,7 +43,7 @@ using Flurl.Util;
 using Org.BouncyCastle.Bcpg;
 using log4net.Repository.Hierarchy;
 using System.Numerics;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
+//using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using static MAVLink;
 using DroneCAN;
 
@@ -3449,7 +3449,7 @@ namespace MissionPlanner
                     var old = GCSViews.FlightData.myhud.bgimage;
                     GCSViews.FlightData.myhud.bgimage = new Bitmap(image.Width, image.Height, 4 * image.Width,
                         PixelFormat.Format32bppPArgb,
-                        image.LockBits(Rectangle.Empty, null, SKColorType.Bgra8888)
+                        image.LockBits(Rectangle.Empty, ImageLockMode.ReadWrite, (PixelFormat)SKColorType.Bgra8888)
                             .Scan0);
                     if (old != null)
                         old.Dispose();
@@ -3474,7 +3474,7 @@ namespace MissionPlanner
                         image.Height,
                         4 * image.Width,
                         PixelFormat.Format32bppPArgb,
-                        image.LockBits(Rectangle.Empty, null, SKColorType.Bgra8888).Scan0);
+                        image.LockBits(Rectangle.Empty, ImageLockMode.ReadWrite, (PixelFormat)SKColorType.Bgra8888).Scan0);
                     if (old != null)
                         old.Dispose();
                 }
@@ -3496,7 +3496,7 @@ namespace MissionPlanner
                     var old = GCSViews.FlightData.myhud.bgimage;
                     GCSViews.FlightData.myhud.bgimage = new Bitmap(image.Width, image.Height, 4 * image.Width,
                         PixelFormat.Format32bppPArgb,
-                        image.LockBits(Rectangle.Empty, null, SKColorType.Bgra8888).Scan0);
+                        image.LockBits(Rectangle.Empty, ImageLockMode.ReadWrite, (PixelFormat)SKColorType.Bgra8888).Scan0);
                     if (old != null)
                         old.Dispose();
                 }

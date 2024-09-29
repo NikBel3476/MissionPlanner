@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
-    <RootNamespace>System.Drawing</RootNamespace>
-    <AssemblyName>System.Drawing.Common</AssemblyName>
+    <!-- <RootNamespace>System.Drawing</RootNamespace>
+    <AssemblyName>System.Drawing.Common</AssemblyName> -->
     <AssemblyVersion>5.0.99.0</AssemblyVersion>
     <FileVersion>4.6.57.0</FileVersion>
     <PackageId>MissionPlanner.Drawing.Common</PackageId>
@@ -11,15 +11,18 @@
     <Company>MissionPlanner.Drawing.Common</Company>
     <Product>MissionPlanner.Drawing.Common</Product>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>open.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Open.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.7.2" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
-    <ProjectReference Include="..\MissionPlanner.Drawing\MissionPlanner.Drawing.csproj" />
+    <ProjectReference Include="..\MissionPlanner.Drawing\MissionPlanner.Drawing.csproj">
+      <Aliases>Drawing</Aliases>
+    </ProjectReference>
   </ItemGroup>
 </Project>

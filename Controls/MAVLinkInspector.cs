@@ -35,7 +35,7 @@ namespace MissionPlanner.Controls
 
             mavi.NewSysidCompid += (sender, args) =>
             {
-                this.BeginInvoke((MethodInvoker)delegate
+                this.BeginInvoke((System.Windows.Forms.MethodInvoker)delegate
                {
                    comboBox1.DataSource = mavi.SeenSysid();
                    comboBox2.DataSource = mavi.SeenCompid();

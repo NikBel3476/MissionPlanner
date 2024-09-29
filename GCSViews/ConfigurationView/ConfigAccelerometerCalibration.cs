@@ -101,7 +101,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 {
                     try
                     {
-                        Invoke((MethodInvoker)delegate
+                        Invoke((System.Windows.Forms.MethodInvoker)delegate
                         {
                             BUT_calib_accell.Text = Strings.Done;
                             BUT_calib_accell.Enabled = false;
@@ -133,7 +133,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         public void UpdateUserMessage(string message)
         {
-            Invoke((MethodInvoker)delegate
+            Invoke((System.Windows.Forms.MethodInvoker)delegate
            {
                if (message.ToLower().Contains("place vehicle") || message.ToLower().Contains("calibration"))
                    lbl_Accel_user.Text = message;

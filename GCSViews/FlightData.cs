@@ -3646,7 +3646,7 @@ namespace MissionPlanner.GCSViews
                         // show disable joystick button
                         if (MainV2.joystick != null && MainV2.joystick.enabled)
                         {
-                            this.BeginInvoke((MethodInvoker) delegate { but_disablejoystick.Visible = true; });
+                            this.BeginInvoke((System.Windows.Forms.MethodInvoker) delegate { but_disablejoystick.Visible = true; });
                         }
 
                         if (MainV2.comPort.MAV.cs.Location != PointLatLngAlt.Zero)

@@ -33,7 +33,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // setup bitmap to screen
             _flow.newImage += (s, eh) =>
             {
-                imagebox.Image = eh.Image.ToSKImage().ToBitmap();
+              // TODO: figure out last two methods
+              imagebox.Image = eh.Image;//.ToSKImage().ToBitmap();
             };
         }
 

@@ -176,7 +176,7 @@ namespace MissionPlanner.Log
 
         void genchkcombo(int logcount)
         {
-            MethodInvoker m = delegate ()
+            System.Windows.Forms.MethodInvoker m = delegate ()
             {
                 //CHK_logs.Items.Clear();
                 //for (int a = 1; a <= logcount; a++)
@@ -369,7 +369,7 @@ namespace MissionPlanner.Log
                     }
                     lock (thisLock)
                     {
-                        this.BeginInvoke((MethodInvoker)delegate ()
+                        this.BeginInvoke((System.Windows.Forms.MethodInvoker)delegate ()
                        {
                            Console.Write(line);
 

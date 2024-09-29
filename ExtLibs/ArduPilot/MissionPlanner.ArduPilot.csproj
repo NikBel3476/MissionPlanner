@@ -26,12 +26,16 @@
     <PackageReference Include="Asyncify" Version="0.9.7" />
     <PackageReference Include="SharpCompress" Version="0.38.0" />
     <PackageReference Include="SharpDX.DirectInput" Version="4.2.0" />
+    <PackageReference Include="System.Drawing.Common" Version="4.7.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Comms\MissionPlanner.Comms.csproj" />
     <ProjectReference Include="..\GMap.NET.Core\GMap.NET.Core.csproj" />
     <ProjectReference Include="..\Mavlink\MAVLink.csproj" />
+    <ProjectReference Include="..\MissionPlanner.Drawing\MissionPlanner.Drawing.csproj">
+      <Aliases>Drawing</Aliases>
+    </ProjectReference>
     <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
     <ProjectReference Include="..\Utilities\MissionPlanner.Utilities.csproj" />
   </ItemGroup>

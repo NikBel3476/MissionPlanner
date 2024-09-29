@@ -56,7 +56,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void addText(string data)
         {
-            BeginInvoke((MethodInvoker) delegate
+            BeginInvoke((System.Windows.Forms.MethodInvoker) delegate
             {
                 if (this.Disposing)
                     return;

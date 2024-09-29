@@ -39,7 +39,7 @@ namespace MissionPlanner.Controls
                     {
                         if (Instance.IsHandleCreated)
                         {
-                            MainV2.instance.BeginInvoke((MethodInvoker)delegate
+                            MainV2.instance.BeginInvoke((System.Windows.Forms.MethodInvoker)delegate
                            {
                                if (Instance == null)
                                    return;
