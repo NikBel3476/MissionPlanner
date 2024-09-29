@@ -79,7 +79,7 @@ namespace MissionPlanner.Controls
             
             try
             {
-                this.Invoke((MethodInvoker)delegate
+                this.Invoke((System.Windows.Forms.MethodInvoker)delegate
                 {
             // make sure its drawn
             this.Refresh();
@@ -91,7 +91,7 @@ namespace MissionPlanner.Controls
 
             try
             {
-                this.Invoke((MethodInvoker)delegate
+                this.Invoke((System.Windows.Forms.MethodInvoker)delegate
                 {
                     log.Info("in focus invoke");
                      // if this windows isnt the current active windows, popups inherit the wrong parent.
@@ -120,7 +120,7 @@ namespace MissionPlanner.Controls
                 {
                     // must be actioned inside the catch, as this thread was just aborted
                     Running = false;
-                    this.BeginInvoke((MethodInvoker)this.Close);
+                    this.BeginInvoke((System.Windows.Forms.MethodInvoker)this.Close);
                     return;
                 }
                 else
@@ -142,7 +142,7 @@ namespace MissionPlanner.Controls
 
             try
             {
-                this.Invoke((MethodInvoker)delegate
+                this.Invoke((System.Windows.Forms.MethodInvoker)delegate
                 {
                     timer1_Tick(null, null);
                 });
@@ -156,7 +156,7 @@ namespace MissionPlanner.Controls
             {
                 //ShowDoneCancelled();
                 Running = false;
-                this.BeginInvoke((MethodInvoker)this.Close);
+                this.BeginInvoke((System.Windows.Forms.MethodInvoker)this.Close);
                 return;
             }
 
@@ -183,7 +183,7 @@ namespace MissionPlanner.Controls
         // - Set label text
         private void ShowDoneCancelled()
         {
-            this.Invoke((MethodInvoker)delegate
+            this.Invoke((System.Windows.Forms.MethodInvoker)delegate
             {
                 this.progressBar1.Visible = false;
                 this.lblProgressMessage.Text = "Cancelled";
@@ -200,7 +200,7 @@ namespace MissionPlanner.Controls
             if (!this.IsHandleCreated)
                 return;
 
-            this.Invoke((MethodInvoker)delegate
+            this.Invoke((System.Windows.Forms.MethodInvoker)delegate
                 {
                     this.progressBar1.Style = ProgressBarStyle.Continuous;
                     this.progressBar1.Value = 100;
@@ -211,7 +211,7 @@ namespace MissionPlanner.Controls
 
             Thread.Sleep(100);         
 
-            this.BeginInvoke((MethodInvoker)this.Close);
+            this.BeginInvoke((System.Windows.Forms.MethodInvoker)this.Close);
         }
 
         // Called as a possible last operation of the bg thread
@@ -232,7 +232,7 @@ namespace MissionPlanner.Controls
             {
                 try
                 {
-                    this.Invoke((MethodInvoker)delegate
+                    this.Invoke((System.Windows.Forms.MethodInvoker)delegate
                                                     {
                                                         this.Text = "Error";
                                                         this.lblProgressMessage.Left = 65;

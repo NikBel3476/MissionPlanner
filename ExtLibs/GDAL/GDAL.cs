@@ -47,7 +47,8 @@ namespace GDAL
 
             try
             {
-                GdalConfiguration.ConfigureGdal();
+                //GdalConfiguration.ConfigureGdal();
+                Gdal.AllRegister();
             }
             catch (Exception ex)
             {
@@ -56,7 +57,8 @@ namespace GDAL
 
             try
             {
-                GdalConfiguration.ConfigureOgr();
+                //GdalConfiguration.ConfigureOgr();
+                Ogr.RegisterAll();
             }
             catch (Exception ex)
             {
@@ -566,7 +568,7 @@ namespace GDAL
             //Extrac srs from input feature   
             string inputShapeSrs;
             SpatialReference spatialRefrence = layer.GetSpatialRef();
-            spatialRefrence.ExportToWkt(out inputShapeSrs);
+            spatialRefrence.ExportToWkt(out inputShapeSrs, []); // TODO: check options parameter after GDAL 3.* update
             //Assign input feature srs to outpur raster  
             outputDataset.SetProjection(inputShapeSrs);
             //Geotransform  

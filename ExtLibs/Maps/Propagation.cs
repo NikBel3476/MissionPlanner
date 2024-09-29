@@ -144,7 +144,7 @@ namespace MissionPlanner.Maps
             }
         }
 
-        private async void elevation_calc()
+        private async Task elevation_calc()
         {
             ele_enabled = true;
 

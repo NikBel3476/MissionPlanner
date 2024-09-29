@@ -183,8 +183,10 @@ namespace com.drew.imaging.jpg
             try
             {
                 lcFileStream = new FileStream(aFileName, FileMode.CreateNew);
-                BinaryFormatter lcBinFor = new BinaryFormatter();
-                lcBinFor.Serialize(lcFileStream, aSegmentData);
+#pragma warning disable SYSLIB0011 // Type or member is obsolete
+				BinaryFormatter lcBinFor = new BinaryFormatter();
+#pragma warning restore SYSLIB0011 // Type or member is obsolete
+				lcBinFor.Serialize(lcFileStream, aSegmentData);
             }
             finally
             {
@@ -207,8 +209,10 @@ namespace com.drew.imaging.jpg
             try
             {
                 lcFileStream = new FileStream(aFileName, FileMode.Open);
-                BinaryFormatter lcBinFor = new BinaryFormatter();
-                return (JpegSegmentData)lcBinFor.Deserialize(lcFileStream);
+#pragma warning disable SYSLIB0011 // Type or member is obsolete
+				BinaryFormatter lcBinFor = new BinaryFormatter();
+#pragma warning restore SYSLIB0011 // Type or member is obsolete
+				return (JpegSegmentData)lcBinFor.Deserialize(lcFileStream);
             }
             finally
             {

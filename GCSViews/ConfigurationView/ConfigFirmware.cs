@@ -259,7 +259,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         {
             try
             {
-                Invoke((MethodInvoker)delegate { updateDisplayName(temp); });
+                Invoke((System.Windows.Forms.MethodInvoker)delegate { updateDisplayName(temp); });
             }
             catch (Exception ex)
             {

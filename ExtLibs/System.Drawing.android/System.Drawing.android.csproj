@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
+		<!--<TargetFrameworks>net8.0-android</TargetFrameworks>-->
     <RootNamespace>System.Drawing</RootNamespace>
     <AssemblyName>System.Drawing</AssemblyName>
     <AssemblyVersion>4.0.0.2</AssemblyVersion>
@@ -14,11 +15,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.7.2" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
-    <ProjectReference Include="..\MissionPlanner.Drawing\MissionPlanner.Drawing.csproj" />
+		<ProjectReference Include="..\MissionPlanner.Drawing\MissionPlanner.Drawing.csproj">
+			<Aliases>Drawing</Aliases>
+		</ProjectReference>
   </ItemGroup>
 </Project>

@@ -103,7 +103,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             if (this.IsDisposed)
                 return;
 
-            this.BeginInvoke((MethodInvoker)delegate
+            this.BeginInvoke((System.Windows.Forms.MethodInvoker)delegate
            {
                if (String.IsNullOrEmpty(first.MavFirmwareVersionStr))
                    imageLabel.Text = first.VehicleType?.ToString() + " " + first.MavFirmwareVersion.ToString() + " " +

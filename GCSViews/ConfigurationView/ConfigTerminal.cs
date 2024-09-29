@@ -108,7 +108,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void addText(string data)
         {
-            BeginInvoke((MethodInvoker)delegate
+            BeginInvoke((System.Windows.Forms.MethodInvoker)delegate
            {
                if (this.Disposing)
                    return;
@@ -620,7 +620,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             if (IsDisposed || Disposing)
                 return;
 
-            Invoke((MethodInvoker)delegate
+            Invoke((System.Windows.Forms.MethodInvoker)delegate
            {
                if (connected && BUT_disconnect.Enabled == false)
                {

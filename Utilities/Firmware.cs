@@ -1178,11 +1178,11 @@ namespace MissionPlanner.Utilities
 
                                 FileStatistics binaryStat = service.Stat("/usr/bin/arducopter");
 
-                                if (initChanged || (binaryStat.FileMode.HasFlag(UnixFileMode.Regular)))
+                                if (initChanged || (binaryStat.FileMode.HasFlag(SharpAdbClient.UnixFileMode.Regular)))
                                 {
                                     adbClient.ExecuteRemoteCommand("mount -o remount,rw /", device, consoleOut);
 
-                                    if (binaryStat.FileMode.HasFlag(UnixFileMode.Regular))
+                                    if (binaryStat.FileMode.HasFlag(SharpAdbClient.UnixFileMode.Regular))
                                     {
                                         // remove old binary location
                                         adbClient.ExecuteRemoteCommand("rm -f /usr/bin/arducopter", device, consoleOut);

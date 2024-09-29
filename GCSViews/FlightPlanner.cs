@@ -775,9 +775,11 @@ namespace MissionPlanner.GCSViews
         {
             using (var ms = new MemoryStream())
             {
-                var formatter = new BinaryFormatter();
+#pragma warning disable SYSLIB0011 // Type or member is obsolete
+				var formatter = new BinaryFormatter();
+#pragma warning restore SYSLIB0011 // Type or member is obsolete
 
-                formatter.Serialize(ms, obj);
+				formatter.Serialize(ms, obj);
 
                 ms.Position = 0;
 
@@ -1345,7 +1347,7 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                Invoke((MethodInvoker) delegate
+                Invoke((System.Windows.Forms.MethodInvoker) delegate
                 {
                     try
                     {
@@ -6885,7 +6887,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void updateMapPosition(PointLatLng currentloc)
         {
-            BeginInvoke((MethodInvoker) delegate
+            BeginInvoke((System.Windows.Forms.MethodInvoker) delegate
             {
                 try
                 {
@@ -6966,7 +6968,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 return;
 
             // number rows
-            BeginInvoke((MethodInvoker) delegate
+            BeginInvoke((System.Windows.Forms.MethodInvoker) delegate
             {
                 // thread for updateing row numbers
                 for (int a = 0; a < Commands.Rows.Count - 0; a++)
@@ -7813,7 +7815,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         {
             //MainMap.ElapsedMilliseconds = ElapsedMilliseconds;
 
-            MethodInvoker m = delegate
+            System.Windows.Forms.MethodInvoker m = delegate
             {
                 lbl_status.Text = "Status: loaded tiles";
 
@@ -7833,7 +7835,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void MainMap_OnTileLoadStart()
         {
-            MethodInvoker m = delegate { lbl_status.Text = "Status: loading tiles..."; };
+            System.Windows.Forms.MethodInvoker m = delegate { lbl_status.Text = "Status: loading tiles..."; };
             try
             {
                 if (IsHandleCreated) BeginInvoke(m);

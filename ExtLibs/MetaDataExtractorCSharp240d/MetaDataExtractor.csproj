@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
     <OutputTypeEx>library</OutputTypeEx>
   </PropertyGroup>
 
@@ -52,6 +52,13 @@
     <EmbeddedResource Include="resources\PanasonicMarkernote.txt" />
     <EmbeddedResource Include="resources\PentaxMarkernote.txt" />
     <EmbeddedResource Include="resources\SonyMarkernote.txt" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="AsyncFixer" Version="1.6.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <None Update="exif.xslt">

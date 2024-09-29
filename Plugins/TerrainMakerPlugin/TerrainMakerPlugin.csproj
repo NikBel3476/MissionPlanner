@@ -1,19 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="15.0" Sdk="Microsoft.NET.Sdk">
+<!-- xmlns="http://schemas.microsoft.com/developer/msbuild/2003" -->
+  <!-- <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" /> -->
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DDD2FEA8-801E-463B-8913-9CCCDA2D9429}</ProjectGuid>
+    <ProjectGuid>{DDD2FEA8-801E-463B-8913-9CCCDA2D9429}</ProjectGuid> 
     <OutputType>Library</OutputType>
     <RootNamespace>TerrainMakerPlugin</RootNamespace>
     <AssemblyName>TerrainMakerPlugin</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+	  <NoWarn>NU1605</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -108,11 +110,11 @@
       <Name>SvgNet</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
+  <!-- <ItemGroup>
     <Compile Include="Location.cs" />
     <Compile Include="TerrainDataFile.cs" />
     <Compile Include="TerrainMakerPlugin.cs" />
-  </ItemGroup>
+  </ItemGroup> -->
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -128,5 +130,5 @@
       <Version>4.7.2</Version>
     </PackageReference>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /> -->
 </Project>

@@ -1,16 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
     <ApplicationIcon />
     <OutputTypeEx>library</OutputTypeEx>
-    <StartupObject />
+    <!-- <StartupObject />
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <DebugType>portable</DebugType>
-    <DebugSymbols>True</DebugSymbols>
+    <DebugSymbols>True</DebugSymbols> -->
     <Description>7zip</Description>
     <NeutralLanguage>en</NeutralLanguage>
-
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +22,14 @@
   <ItemGroup>
     <None Include="Compress\LzmaAlone\Properties\AssemblyInfo.cs" />
     <None Include="Compress\LzmaAlone\Properties\Settings.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AsyncFixer" Version="1.6.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
 
 </Project>

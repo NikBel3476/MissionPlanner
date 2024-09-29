@@ -3036,14 +3036,16 @@ namespace GMap.NET.WindowsForms
             remove { Core.OnEmptyTileError -= value; }
         }
 
-        #endregion
+		#endregion
 
 #if !PocketPC
 
-        #region Serialization
+		#region Serialization
 
-        static readonly BinaryFormatter BinaryFormatter = new BinaryFormatter();
-        private SKSurface _skSurface;
+#pragma warning disable SYSLIB0011 // Type or member is obsolete
+		static readonly BinaryFormatter BinaryFormatter = new BinaryFormatter();
+#pragma warning restore SYSLIB0011 // Type or member is obsolete
+		private SKSurface _skSurface;
         private SKSize _screenCanvasSize;
 
         /// <summary>

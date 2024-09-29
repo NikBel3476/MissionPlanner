@@ -371,8 +371,10 @@ namespace MissionPlanner.Utilities
             {
                 using (GZipStream gs = new GZipStream(file, CompressionMode.Compress))
                 {
-                    BinaryFormatter serializer = new BinaryFormatter();
-                    serializer.Serialize(gs, cache);
+#pragma warning disable SYSLIB0011 // Type or member is obsolete
+					BinaryFormatter serializer = new BinaryFormatter();
+#pragma warning restore SYSLIB0011 // Type or member is obsolete
+					serializer.Serialize(gs, cache);
                 }
             }
         }
@@ -383,8 +385,10 @@ namespace MissionPlanner.Utilities
             {
                 //load cache
                 cache cache = new cache();
-                BinaryFormatter deserializer = new BinaryFormatter();
-                using (var file = File.OpenRead(CachePath))
+#pragma warning disable SYSLIB0011 // Type or member is obsolete
+				BinaryFormatter deserializer = new BinaryFormatter();
+#pragma warning restore SYSLIB0011 // Type or member is obsolete
+				using (var file = File.OpenRead(CachePath))
                 {
                     using (GZipStream gs = new GZipStream(file, CompressionMode.Decompress))
                     {

@@ -1,5 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">  <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup>
+    <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
+    <!-- <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks> -->
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -7,6 +9,7 @@
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>  <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <NoWarn>NU1605</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>

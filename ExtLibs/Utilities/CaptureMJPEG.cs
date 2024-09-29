@@ -21,8 +21,8 @@ namespace MissionPlanner.Utilities
 
         static DateTime lastimage = DateTime.Now;
         static int fps = 0;
-        private static event EventHandler<Bitmap> _onNewImage;
-        public static event EventHandler<Bitmap> onNewImage
+        private static event EventHandler<System.Drawing.Bitmap> _onNewImage;
+        public static event EventHandler<System.Drawing.Bitmap> onNewImage
         {
             add { _onNewImage += value; }
             remove { _onNewImage -= value; }

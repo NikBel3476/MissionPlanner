@@ -368,7 +368,7 @@ namespace MissionPlanner.Utilities
 
         private void SSH_AddText(string data)
         {
-            TXT_terminal.BeginInvoke((MethodInvoker)delegate
+            TXT_terminal.BeginInvoke((System.Windows.Forms.MethodInvoker)delegate
            {
                 //Need to clear clipboard for controls to work in nano
                 try

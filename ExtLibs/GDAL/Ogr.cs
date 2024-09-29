@@ -24,8 +24,10 @@ namespace GDAL
             if (!File.Exists(inputFile))
                 return null;
 
-            GdalConfiguration.ConfigureOgr();
-            GdalConfiguration.ConfigureGdal();
+            //GdalConfiguration.ConfigureOgr();
+            //GdalConfiguration.ConfigureGdal();
+            OSGeo.GDAL.Gdal.AllRegister();
+            Ogr.RegisterAll();
 
             //Reading the vector data  
             DataSource dataSource = Ogr.Open(inputFile, 0);
