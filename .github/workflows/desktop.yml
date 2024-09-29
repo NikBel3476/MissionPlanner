@@ -1,15 +1,15 @@
-name: .NET Core Desktop
+name: desktop build
 
 on: [push, pull_request]
 
 jobs:
   build:
-    strategy:
-			fail-fast: false
-      matrix:
-				os: [ubuntu-latest, windows-latest, macos-latest]
-
     runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     # env:
     #   Solution_Name: your-solution-name                         # Replace with your solution name, i.e. MyWpfApp.sln.
@@ -18,23 +18,23 @@ jobs:
     #   Wap_Project_Path: your-wap-project-path                   # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-				sobmosules: recursive
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
 
-    # Install the .NET
-    - name: Install .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.0.x
+      # Install the .NET
+      - name: Install .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
 
-		- name: Restore dependencies
-		run: dotnet restore MissionPlanner.csproj
+      - name: Restore dependencies
+        run: dotnet restore MissionPlanner.csproj
 
-		- name: Build
-			run: dotnet build MissionPlanner.csproj -c Release -f net8.0-windows10.0.19041 --no-restore
+      - name: Build
+        run: dotnet build MissionPlanner.csproj -c Release -f net8.0-windows10.0.19041 --no-restore
 
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     # - name: Setup MSBuild.exe
