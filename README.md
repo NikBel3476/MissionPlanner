@@ -25,6 +25,10 @@ Currently, Mission Planner needs:
 
 Visual Studio 2022
 
+##### Command line
+From project directory run:
+`dotnet build MissionPlanner.csproj -c Release -f net8.0-windows10.0.19041`
+
 ##### IDE
 
 ### Visual Studio Community
