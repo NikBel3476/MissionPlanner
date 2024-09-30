@@ -17,6 +17,8 @@
   <ItemGroup>
     <Compile Remove="Compress\LzmaAlone\Properties\AssemblyInfo.cs" />
     <Compile Remove="Compress\LzmaAlone\Properties\Settings.cs" />
+    <Compile Remove="Compress\LzmaAlone\obj\**" />
+    <Compile Remove="Compress\LzmaAlone\bin\**" />
   </ItemGroup>
 
   <ItemGroup>

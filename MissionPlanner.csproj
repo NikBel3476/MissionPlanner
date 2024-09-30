@@ -743,9 +743,9 @@
     <Content Include="Drivers\devcon.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Drivers\DriverCleanup.exe">
+    <!-- <Content Include="Drivers\DriverCleanup.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </Content> -->
     <Content Include="Drivers\Holybro.inf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

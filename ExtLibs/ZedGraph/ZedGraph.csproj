@@ -4,7 +4,7 @@
     <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>  
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,5 +13,7 @@
   </ItemGroup> <ItemGroup>
     <!-- <Reference Include="System.Windows.Forms" Condition="'$(TargetFramework)' == 'net472'" >
     </Reference> -->
+    <Compile Remove="ZedGraph\obj\**" />
+    <Compile Remove="ZedGraph\bin\**" />
   </ItemGroup>
 </Project>
