@@ -4,13 +4,14 @@
   <PropertyGroup>
     <SolutionDir Condition=" '$(SolutionDir)' == '' ">$(ProjectDir)..\</SolutionDir>
     <RootNamespace>ProjNet</RootNamespace>
-    <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 
 
   </PropertyGroup>
 
-  
+
 
   <!-- Client Profile frameworks don't have built-in shortcuts, so we need to specify these. -->
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35-client' ">

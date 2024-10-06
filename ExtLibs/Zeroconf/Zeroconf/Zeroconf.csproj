@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
     <Authors>Oren Novotny</Authors>
     <PackageLicenseUrl>http://opensource.org/licenses/ms-pl</PackageLicenseUrl>
@@ -26,7 +27,8 @@
     <PackageReference Include="Asyncify" Version="0.9.7" />
     <PackageReference Include="System.Reactive" Version="6.0.1" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+  <ItemGroup>
+  <!-- Condition=" '$(TargetFramework)' == 'netstandard2.0' " -->
     <Compile Include="Platforms\netstandard1.3\*.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />

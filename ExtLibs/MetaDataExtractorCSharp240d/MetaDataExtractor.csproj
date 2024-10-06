@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
     <OutputTypeEx>library</OutputTypeEx>
   </PropertyGroup>
 
@@ -18,7 +19,7 @@
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <EmbeddedResource Include="resources\CanonMarkernote.txt" />
     <EmbeddedResource Include="resources\CasioMarkernote.txt" />
@@ -53,7 +54,7 @@
     <EmbeddedResource Include="resources\PentaxMarkernote.txt" />
     <EmbeddedResource Include="resources\SonyMarkernote.txt" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="AsyncFixer" Version="1.6.0">
       <PrivateAssets>all</PrivateAssets>

@@ -1,4 +1,4 @@
-﻿using GMap.NET.MapProviders;
+using GMap.NET.MapProviders;
 using log4net;
 using log4net.Config;
 using MissionPlanner.Comms;
@@ -31,6 +31,7 @@ using Newtonsoft.Json.Serialization;
 using Architecture = System.Runtime.InteropServices.Architecture;
 using Trace = System.Diagnostics.Trace;
 using System.Threading.Tasks;
+using Widgets;
 
 namespace MissionPlanner
 {
@@ -42,15 +43,15 @@ namespace MissionPlanner
 
         public static string name { get; internal set; }
 
-        public static bool WindowsStoreApp
-        {
-            get { return Application.ExecutablePath.Contains("WindowsApps"); }
-        }
+		public static bool WindowsStoreApp
+		{
+			get { return Application.ExecutablePath.Contains("WindowsApps"); }
+		}
 
-        /// <summary>
-        /// MissionPlanner text image
-        /// </summary>
-        public static Image Logo = null;
+		/// <summary>
+		/// MissionPlanner text image
+		/// </summary>
+		public static Image Logo = null;
 
         /// <summary>
         /// Ardupilot logo
@@ -124,7 +125,15 @@ namespace MissionPlanner
         public static void Start(string[] args)
         {
             Program.args = args;
-            Console.WriteLine(
+
+			Avalonia.AppBuilder.Configure<Widgets.App>()
+					.UsePlatformDetect()
+					.WithInterFont()
+					.LogToTrace()
+					//.UseReactiveUI()
+					.SetupWithoutStarting();
+
+			Console.WriteLine(
                 "If your error is about Microsoft.DirectX.DirectInput, please install the latest directx redist from here http://www.microsoft.com/en-us/download/details.aspx?id=35 \n\n");
             Console.WriteLine("Debug under mono    MONO_LOG_LEVEL=debug mono MissionPlanner.exe");
             Console.WriteLine("To fix any filename case issues under mono use    export MONO_IOMAP=drive:case");
@@ -158,8 +167,8 @@ namespace MissionPlanner
 
             Thread = Thread.CurrentThread;
 
-            System.Windows.Forms.Application.EnableVisualStyles();
-            XmlConfigurator.Configure(LogManager.GetRepository(Assembly.GetCallingAssembly()));
+			System.Windows.Forms.Application.EnableVisualStyles();
+			XmlConfigurator.Configure(LogManager.GetRepository(Assembly.GetCallingAssembly()));
             if (Environment.OSVersion.Platform == PlatformID.Unix)
             {
                 var repository = LogManager.GetRepository() as Hierarchy;
@@ -185,9 +194,9 @@ namespace MissionPlanner
 
             ServicePointManager.DefaultConnectionLimit = 10;
 
-            System.Windows.Forms.Application.ThreadException += Application_ThreadException;
+			System.Windows.Forms.Application.ThreadException += Application_ThreadException;
 
-            if (args.Length > 0 && args[0] == "/update")
+			if (args.Length > 0 && args[0] == "/update")
             {
                 Utilities.Update.DoUpdate();
                 return;
@@ -463,9 +472,9 @@ namespace MissionPlanner
 
             try
             {
-                Thread.CurrentThread.Name = "Base Thread";
+				Thread.CurrentThread.Name = "Base Thread";
                 Console.WriteLine("Application.Run(new MainV2())");
-                Application.Run(new MainV2());
+				Application.Run(new MainV2());
             }
             catch (Exception ex)
             {

@@ -6,6 +6,7 @@ using System.Reactive.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Heijden.DNS;
+using System.Net.NetworkInformation;
 
 namespace Zeroconf
 {
@@ -70,7 +71,7 @@ namespace Zeroconf
                                                            options.ScanTime,
                                                            options.Retries,
                                                            (int)options.RetryDelay.TotalMilliseconds,
-                                                           converter,                                                           
+                                                           converter,
                                                            cancellationToken)
                                       .ConfigureAwait(false);
 
@@ -116,7 +117,7 @@ namespace Zeroconf
             }
 
             var dispNameSet = false;
-           
+
             foreach (var ptrRec in response.RecordsPTR)
             {
                 // set the display name if needed

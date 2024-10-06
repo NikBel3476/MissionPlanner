@@ -1,10 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>  
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +15,8 @@
     <Compile Remove="Dowding\src\Dowding.Test\**" />
     <Compile Remove="Dronelogbook\bin\**" />
     <Compile Remove="Dronelogbook\obj\**" />
+    <Compile Remove="Dronelogbook\src\Dronelogbook\bin\**" />
+    <Compile Remove="Dronelogbook\src\Dronelogbook\obj\**" />
     <Compile Remove="Dronelogbook\docs\**" />
     <Compile Remove="Dronelogbook\packages\**" />
     <Compile Remove="Dronelogbook\src\Dronelogbook.Test\**" />
@@ -23,6 +26,8 @@
     <EmbeddedResource Remove="Dowding\src\Dowding.Test\**" />
     <EmbeddedResource Remove="Dronelogbook\bin\**" />
     <EmbeddedResource Remove="Dronelogbook\obj\**" />
+    <EmbeddedResource Remove="Dronelogbook\src\Dronelogbook\bin\**" />
+    <EmbeddedResource Remove="Dronelogbook\src\Dronelogbook\obj\**" />
     <EmbeddedResource Remove="Dronelogbook\docs\**" />
     <EmbeddedResource Remove="Dronelogbook\packages\**" />
     <EmbeddedResource Remove="Dronelogbook\src\Dronelogbook.Test\**" />
@@ -32,6 +37,8 @@
     <None Remove="Dowding\src\Dowding.Test\**" />
     <None Remove="Dronelogbook\bin\**" />
     <None Remove="Dronelogbook\obj\**" />
+    <None Remove="Dronelogbook\src\Dronelogbook\bin\**" />
+    <None Remove="Dronelogbook\src\Dronelogbook\obj\**" />
     <None Remove="Dronelogbook\docs\**" />
     <None Remove="Dronelogbook\packages\**" />
     <None Remove="Dronelogbook\src\Dronelogbook.Test\**" />

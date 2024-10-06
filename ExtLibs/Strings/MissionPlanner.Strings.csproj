@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0-windows10.0.19041</TargetFrameworks>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
     <AssemblyName>MissionPlanner.Strings</AssemblyName>
     <RootNamespace>MissionPlanner</RootNamespace>
     <ApplicationIcon />
@@ -11,7 +12,7 @@
     <DelaySign>true</DelaySign>
     <AssemblyOriginatorKeyFile>mykey.snk</AssemblyOriginatorKeyFile>
     <NeutralLanguage>en</NeutralLanguage>
-  
+
  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>portable</DebugType>
@@ -31,7 +32,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
- 
+
     <EmbeddedResource Update="Strings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
@@ -46,7 +47,7 @@
     <EmbeddedResource Update="Strings.tr.resx"> </EmbeddedResource>
     <EmbeddedResource Update="Strings.uk.resx"></EmbeddedResource>
     <EmbeddedResource Update="Strings.zh-Hans.resx"></EmbeddedResource>
- 
+
 
   </ItemGroup>
 
