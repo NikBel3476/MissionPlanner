@@ -34,7 +34,7 @@ jobs:
         run: dotnet restore MissionPlanner.csproj
 
       - name: Build
-        run: dotnet build MissionPlanner.csproj -c Release -f net8.0-windows10.0.19041 --no-restore
+        run: dotnet build MissionPlanner.csproj -c Release --no-restore
 
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     # - name: Setup MSBuild.exe
