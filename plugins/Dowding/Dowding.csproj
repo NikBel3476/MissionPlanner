@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">  <PropertyGroup>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <!--<TargetFrameworks>net8.0</TargetFrameworks>-->
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <DebugType>portable</DebugType>
-    <DebugSymbols>true</DebugSymbols> 
+    <DebugSymbols>true</DebugSymbols>
     <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>

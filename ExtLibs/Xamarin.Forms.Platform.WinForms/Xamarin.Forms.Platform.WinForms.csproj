@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProjectGuid>{563D7C2E-14E2-47EC-95E4-4EA0BBA75C18}</ProjectGuid>
-    <TargetFrameworks>net8.0</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
+    <!--<TargetFrameworks>net8.0</TargetFrameworks>-->
+    <TargetFrameworks >net8.0-windows10.0.19041.0</TargetFrameworks>
     <AssemblyTitle>Xamarin.Forms for Windows Forms</AssemblyTitle>
     <Product>Xamarin.Forms.Platform.WinForms</Product>
     <Copyright>Copyright (c) Yasuhiro Taniuchi</Copyright>
     <AssemblyVersion>4.1.0.1</AssemblyVersion>
     <FileVersion>4.1.0.1</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
-		 <UseWindowsForms>true</UseWindowsForms> 
+		 <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>

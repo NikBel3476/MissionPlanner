@@ -20,6 +20,9 @@ namespace MissionPlanner.GCSViews
         public InitialSetup()
         {
             InitializeComponent();
+						winFormsAvaloniaControlHost.Content = new Widgets.Views.MainView {
+							DataContext = new Widgets.ViewModels.MainViewModel()
+						};
         }
 
         public bool isConnected
@@ -138,7 +141,7 @@ namespace MissionPlanner.GCSViews
 
             AddBackstageViewPage(typeof(ConfigSecureAP), "Secure",
                 isDisConnected);
-         
+
 
             var mand = AddBackstageViewPage(typeof(ConfigMandatory), rm.GetString("backstageViewPagemand.Text"), isConnected && gotAllParams);
 

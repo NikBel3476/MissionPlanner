@@ -1,15 +1,16 @@
 ﻿using System.Windows.Forms;
+using Avalonia.Win32.Interoperability;
 
 namespace MissionPlanner.GCSViews
 {
     partial class InitialSetup
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -24,8 +25,8 @@ namespace MissionPlanner.GCSViews
 
         #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -61,163 +62,176 @@ namespace MissionPlanner.GCSViews
             this.backstageViewPagesonar = new System.Windows.Forms.Label();
             this.backstageViewPagetradheli = new System.Windows.Forms.Label();
             this.backstageViewPagewizard = new System.Windows.Forms.Label();
+						this.winFormsAvaloniaControlHost = new WinFormsAvaloniaControlHost();
             this.SuspendLayout();
-            // 
+            //
             // backstageView
-            // 
+            //
             resources.ApplyResources(this.backstageView, "backstageView");
             this.backstageView.HighlightColor1 = System.Drawing.SystemColors.Highlight;
             this.backstageView.HighlightColor2 = System.Drawing.SystemColors.MenuHighlight;
             this.backstageView.Name = "backstageView";
             this.backstageView.WidthMenu = 172;
-            // 
+            //
             // backstageViewPageaccel
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageaccel, "backstageViewPageaccel");
             this.backstageViewPageaccel.Name = "backstageViewPageaccel";
-            // 
+            //
             // backstageViewPageairspeed
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageairspeed, "backstageViewPageairspeed");
             this.backstageViewPageairspeed.Name = "backstageViewPageairspeed";
-            // 
+            //
             // backstageViewPageAntTrack
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageAntTrack, "backstageViewPageAntTrack");
             this.backstageViewPageAntTrack.Name = "backstageViewPageAntTrack";
-            // 
+            //
             // backstageViewPagebatmon
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagebatmon, "backstageViewPagebatmon");
             this.backstageViewPagebatmon.Name = "backstageViewPagebatmon";
-            // 
+            //
             // backstageViewPageBatt2
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageBatt2, "backstageViewPageBatt2");
             this.backstageViewPageBatt2.Name = "backstageViewPageBatt2";
-            // 
+            //
             // backstageViewPagecompass
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagecompass, "backstageViewPagecompass");
             this.backstageViewPagecompass.Name = "backstageViewPagecompass";
-            // 
+            //
             // backstageViewPagecompassmot
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagecompassmot, "backstageViewPagecompassmot");
             this.backstageViewPagecompassmot.Name = "backstageViewPagecompassmot";
-            // 
+            //
             // backstageViewPageESC
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageESC, "backstageViewPageESC");
             this.backstageViewPageESC.Name = "backstageViewPageESC";
-            // 
+            //
             // backstageViewPageESP
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageESP, "backstageViewPageESP");
             this.backstageViewPageESP.Name = "backstageViewPageESP";
-            // 
+            //
             // backstageViewPageflmode
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageflmode, "backstageViewPageflmode");
             this.backstageViewPageflmode.Name = "backstageViewPageflmode";
-            // 
+            //
             // backstageViewPageframetype
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageframetype, "backstageViewPageframetype");
             this.backstageViewPageframetype.Name = "backstageViewPageframetype";
-            // 
+            //
             // backstageViewPagefs
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagefs, "backstageViewPagefs");
             this.backstageViewPagefs.Name = "backstageViewPagefs";
-            // 
+            //
             // backstageViewPagefw
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagefw, "backstageViewPagefw");
             this.backstageViewPagefw.Name = "backstageViewPagefw";
-            // 
+            //
             // backstageViewPagefwdisabled
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagefwdisabled, "backstageViewPagefwdisabled");
             this.backstageViewPagefwdisabled.Name = "backstageViewPagefwdisabled";
-            // 
+            //
             // backstageViewPagegimbal
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagegimbal, "backstageViewPagegimbal");
             this.backstageViewPagegimbal.Name = "backstageViewPagegimbal";
-            // 
+            //
             // backstageViewPagehwbt
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagehwbt, "backstageViewPagehwbt");
             this.backstageViewPagehwbt.Name = "backstageViewPagehwbt";
-            // 
+            //
             // backstageViewPageinstfw
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageinstfw, "backstageViewPageinstfw");
             this.backstageViewPageinstfw.Name = "backstageViewPageinstfw";
-            // 
+            //
             // backstageViewPagemand
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagemand, "backstageViewPagemand");
             this.backstageViewPagemand.Name = "backstageViewPagemand";
-            // 
+            //
             // backstageViewPageMotorTest
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageMotorTest, "backstageViewPageMotorTest");
             this.backstageViewPageMotorTest.Name = "backstageViewPageMotorTest";
-            // 
+            //
             // backstageViewPageopt
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageopt, "backstageViewPageopt");
             this.backstageViewPageopt.Name = "backstageViewPageopt";
-            // 
+            //
             // backstageViewPageoptflow
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageoptflow, "backstageViewPageoptflow");
             this.backstageViewPageoptflow.Name = "backstageViewPageoptflow";
-            // 
+            //
             // backstageViewPageosd
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageosd, "backstageViewPageosd");
             this.backstageViewPageosd.Name = "backstageViewPageosd";
-            // 
+            //
             // backstageViewPageParachute
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageParachute, "backstageViewPageParachute");
             this.backstageViewPageParachute.Name = "backstageViewPageParachute";
-            // 
+            //
             // backstageViewPagePX4Flow
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagePX4Flow, "backstageViewPagePX4Flow");
             this.backstageViewPagePX4Flow.Name = "backstageViewPagePX4Flow";
-            // 
+            //
             // backstageViewPageradio
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageradio, "backstageViewPageradio");
             this.backstageViewPageradio.Name = "backstageViewPageradio";
-            // 
+            //
             // backstageViewPageSikradio
-            // 
+            //
             resources.ApplyResources(this.backstageViewPageSikradio, "backstageViewPageSikradio");
             this.backstageViewPageSikradio.Name = "backstageViewPageSikradio";
-            // 
+            //
             // backstageViewPagesonar
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagesonar, "backstageViewPagesonar");
             this.backstageViewPagesonar.Name = "backstageViewPagesonar";
-            // 
+            //
             // backstageViewPagetradheli
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagetradheli, "backstageViewPagetradheli");
             this.backstageViewPagetradheli.Name = "backstageViewPagetradheli";
-            // 
+            //
             // backstageViewPagewizard
-            // 
+            //
             resources.ApplyResources(this.backstageViewPagewizard, "backstageViewPagewizard");
             this.backstageViewPagewizard.Name = "backstageViewPagewizard";
-            // 
+						//
+						// avaloniaHost
+						//
+						this.winFormsAvaloniaControlHost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+						| System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
+						this.winFormsAvaloniaControlHost.Content = null;
+						this.winFormsAvaloniaControlHost.Location = new System.Drawing.Point(6, 19);
+						this.winFormsAvaloniaControlHost.Name = "avaloniaHost";
+						this.winFormsAvaloniaControlHost.Size = new System.Drawing.Size(489, 393);
+						this.winFormsAvaloniaControlHost.TabIndex = 0;
+						this.winFormsAvaloniaControlHost.Text = "avaloniaHost";
+            //
             // InitialSetup
-            // 
+            //
             this.Controls.Add(this.backstageViewPageaccel);
             this.Controls.Add(this.backstageViewPageairspeed);
             this.Controls.Add(this.backstageViewPageAntTrack);
@@ -248,6 +262,7 @@ namespace MissionPlanner.GCSViews
             this.Controls.Add(this.backstageViewPagetradheli);
             this.Controls.Add(this.backstageViewPagewizard);
             this.Controls.Add(this.backstageView);
+						this.Controls.Add(this.winFormsAvaloniaControlHost);
             this.Name = "InitialSetup";
             resources.ApplyResources(this, "$this");
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HardwareConfig_FormClosing);
@@ -258,7 +273,7 @@ namespace MissionPlanner.GCSViews
 
         #endregion
 
-     
+
 
         private Label backstageViewPageaccel;
         private Label backstageViewPageairspeed;
@@ -289,6 +304,7 @@ namespace MissionPlanner.GCSViews
         private Label backstageViewPagesonar;
         private Label backstageViewPagetradheli;
         private Label backstageViewPagewizard;
+				private WinFormsAvaloniaControlHost winFormsAvaloniaControlHost { get; set; }
 
         internal Controls.BackstageView.BackstageView backstageView;
 

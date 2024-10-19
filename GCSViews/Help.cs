@@ -12,6 +12,9 @@ namespace MissionPlanner.GCSViews
         public Help()
         {
             InitializeComponent();
+						winFormsAvaloniaControlHost.Content = new Widgets.Views.MainView {
+							DataContext = new Widgets.ViewModels.MainViewModel()
+						};
         }
 
         public void Activate()

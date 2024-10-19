@@ -32,6 +32,7 @@ using Architecture = System.Runtime.InteropServices.Architecture;
 using Trace = System.Diagnostics.Trace;
 using System.Threading.Tasks;
 using Widgets;
+using Avalonia;
 
 namespace MissionPlanner
 {
@@ -45,7 +46,7 @@ namespace MissionPlanner
 
 		public static bool WindowsStoreApp
 		{
-			get { return Application.ExecutablePath.Contains("WindowsApps"); }
+			get { return System.Windows.Forms.Application.ExecutablePath.Contains("WindowsApps"); }
 		}
 
 		/// <summary>
@@ -124,14 +125,14 @@ namespace MissionPlanner
         [MethodImpl(MethodImplOptions.NoInlining)]
         public static void Start(string[] args)
         {
-            Program.args = args;
-
-			Avalonia.AppBuilder.Configure<Widgets.App>()
-					.UsePlatformDetect()
-					.WithInterFont()
-					.LogToTrace()
-					//.UseReactiveUI()
-					.SetupWithoutStarting();
+					Program.args = args;
+					ApplicationConfiguration.Initialize();
+					Avalonia.AppBuilder.Configure<Widgets.App>()
+						.UsePlatformDetect()
+						// .WithInterFont()
+						// .LogToTrace()
+						//.UseReactiveUI()
+						.SetupWithoutStarting();
 
 			Console.WriteLine(
                 "If your error is about Microsoft.DirectX.DirectInput, please install the latest directx redist from here http://www.microsoft.com/en-us/download/details.aspx?id=35 \n\n");
@@ -286,7 +287,7 @@ namespace MissionPlanner
             string strVersion = File.Exists("version.txt")
                 ? File.ReadAllText("version.txt")
                 : System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            Splash.Text = name + " " + Application.ProductVersion + " build " + strVersion;
+            Splash.Text = name + " " + System.Windows.Forms.Application.ProductVersion + " build " + strVersion;
             Console.WriteLine("Splash.Show()");
             Splash.Show();
 
@@ -295,9 +296,9 @@ namespace MissionPlanner
                 Splash.TopMost = false;
 
             Console.WriteLine("Application.DoEvents");
-            Application.DoEvents();
+            System.Windows.Forms.Application.DoEvents();
             Console.WriteLine("Application.DoEvents");
-            Application.DoEvents();
+            System.Windows.Forms.Application.DoEvents();
 
             CustomMessageBox.ShowEvent += (text, caption, buttons, icon, yestext, notext) =>
             {
@@ -320,7 +321,7 @@ namespace MissionPlanner
             MissionPlanner.Comms.CommsBase.ApplyTheme += MissionPlanner.Utilities.ThemeManager.ApplyThemeTo;
             MissionPlanner.Comms.SerialPort.GetDeviceName += SerialPort_GetDeviceName;
 
-            MissionPlanner.Utilities.Extensions.MessageLoop = new Action(() => Application.DoEvents());
+            MissionPlanner.Utilities.Extensions.MessageLoop = new Action(() => System.Windows.Forms.Application.DoEvents());
 
             Console.WriteLine("Setup GMaps 1");
             // set the cache provider to my custom version
@@ -361,21 +362,21 @@ namespace MissionPlanner
             if (Settings.Instance["GoogleApiKey"] != null) GoogleMapProvider.APIKey = Settings.Instance["GoogleApiKey"];
 
             Console.WriteLine("Setup Tracking.productName");
-            Tracking.productName = Application.ProductName;
-            Tracking.productVersion = Application.ProductVersion;
-            Tracking.currentCultureName = Application.CurrentCulture.Name;
+            Tracking.productName = System.Windows.Forms.Application.ProductName;
+            Tracking.productVersion = System.Windows.Forms.Application.ProductVersion;
+            Tracking.currentCultureName = System.Windows.Forms.Application.CurrentCulture.Name;
             Console.WriteLine("Setup Tracking.primaryScreenBitsPerPixel");
             Tracking.primaryScreenBitsPerPixel = Screen.PrimaryScreen.BitsPerPixel;
             Tracking.boundsWidth = Screen.PrimaryScreen.Bounds.Width;
             Tracking.boundsHeight = Screen.PrimaryScreen.Bounds.Height;
 
             Console.WriteLine("Setup Settings.Instance.UserAgent");
-            Settings.Instance.UserAgent = Application.ProductName + " " + Application.ProductVersion + " (" +
+            Settings.Instance.UserAgent = System.Windows.Forms.Application.ProductName + " " + System.Windows.Forms.Application.ProductVersion + " (" +
                                           Environment.OSVersion?.VersionString + ")";
 
             Console.WriteLine("Setup check gdal dir");
             // optionally add gdal support
-            if (Directory.Exists(Application.StartupPath + Path.DirectorySeparatorChar + "gdal"))
+            if (Directory.Exists(System.Windows.Forms.Application.StartupPath + Path.DirectorySeparatorChar + "gdal"))
             {
                 Console.WriteLine("Setup gdal");
 #if !LIB
@@ -472,9 +473,9 @@ namespace MissionPlanner
 
             try
             {
-				Thread.CurrentThread.Name = "Base Thread";
+								Thread.CurrentThread.Name = "Base Thread";
                 Console.WriteLine("Application.Run(new MainV2())");
-				Application.Run(new MainV2());
+								System.Windows.Forms.Application.Run(new MainV2());
             }
             catch (Exception ex)
             {
@@ -745,7 +746,7 @@ namespace MissionPlanner
             if (ex.Message.Contains("Array.Empty"))
             {
                 CustomMessageBox.Show("Please install Microsoft Dot Net 4.6.2");
-                Application.Exit();
+                System.Windows.Forms.Application.Exit();
                 return;
             }
 
@@ -849,7 +850,7 @@ namespace MissionPlanner
 
                     string postData = "message=" + Environment.OSVersion.VersionString + " " +
                                       System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()
-                                      + " " + Application.ProductVersion
+                                      + " " + System.Windows.Forms.Application.ProductVersion
                                       + "\nException " + ex.ToString().Replace('&', ' ').Replace('=', ' ')
                                       + "\nStack: " + ex.StackTrace.ToString().Replace('&', ' ').Replace('=', ' ')
                                       + "\nTargetSite " + ex.TargetSite + " " + ex.TargetSite.DeclaringType
