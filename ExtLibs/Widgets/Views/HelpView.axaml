@@ -1,0 +1,86 @@
+<Border
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:vm="clr-namespace:Widgets.ViewModels"
+	mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+	x:Class="Widgets.Views.HelpView"
+>
+	<ScrollViewer>
+		<ScrollViewer.Styles>
+			<Style Selector="Run.url">
+				<Setter Property="FontWeight" Value="Bold" />
+				<Setter Property="TextDecorations" Value="Underline" />
+			</Style>
+		</ScrollViewer.Styles>
+		<StackPanel>
+			<TextBlock>
+				Welcome to the <Run FontWeight="Bold">Mission Planner</Run>, mission planning for
+				Unmanned Aerial Vehicles <Run FontWeight="Bold">(UAV)</Run>.
+				<LineBreak/>
+				<LineBreak/>
+				Help:
+				<LineBreak/>
+				Arduplane: <Run Classes="url">http://ardupilot.org/plane</Run>
+				<LineBreak/>
+				ArduCopter: <Run Classes="url">http://ardupilot.org/copter</Run>
+				<LineBreak/>
+				ArduRover: <Run Classes="url">http://ardupilot.org/rover</Run>
+				<LineBreak/>
+				<LineBreak/>
+				Please visit <Run Classes="url">http://ardupilot.org/planner</Run> further information.
+				<LineBreak/>
+				<LineBreak/>
+				Main Developer: Michael Oborne
+				<LineBreak/>
+				Design: Samantha Nelson
+				<LineBreak/>
+				Contributions from: Andrew Radford,  Marooned, Ryan Beall, Tom Pittenger and
+				<Run Classes="url">https://github.com/ArduPilot/MissionPlanner/graphs/contributors</Run>
+				<LineBreak/>
+				ArduCopter Illustrations: Max Levine
+				<LineBreak/>
+				Librarys: Gmap.net, Sharpkml, SharpZipLib, IronPython, KMLib, OpenTK, ZedGraph, alglib,
+				BouncyCastle, DotSpatial, LibVLC, netDXF
+				<LineBreak/>
+				<LineBreak/>
+				Companys that have contributed to Mission Planners development: 3D Robotics, Falcon Unmanned, UAV Solutions
+				<LineBreak/>
+				<LineBreak/>
+				ShortCuts
+				<LineBreak/>
+				<LineBreak/>
+				Main Screen<LineBreak/>
+				F2 - FlightData<LineBreak/>
+				F3 - FlightPlanner<LineBreak/>
+				F4 - Tuning<LineBreak/>
+				F5 - Refresh full param list<LineBreak/>
+				Control - F - Temp screen<LineBreak/>
+				Control - T - Blind connect<LineBreak/>
+				<LineBreak/>
+				FlightData<LineBreak/>
+				Control - 1 - tab 1<LineBreak/>
+				Control - 2 - tab 2<LineBreak/>
+				Control - 3 - tab 3<LineBreak/>
+				Control - 4 - tab 4<LineBreak/>
+				Control - 5 - tab 5<LineBreak/>
+				Control - 6 - tab 6<LineBreak/>
+				Control - 7 - tab 7<LineBreak/>
+				Control - 8 - tab 8<LineBreak/>
+				Control - 9 - tab 9<LineBreak/>
+				Control - 0 - tab 10<LineBreak/>
+				<LineBreak/>
+				FlightPlanner<LineBreak/>
+				Control - Z - undo<LineBreak/>
+				Control - O - open wp file<LineBreak/>
+				Control - S - save wp file<LineBreak/>
+				<LineBreak/>
+				AutoWP Grid<LineBreak/>
+				Control - O - open grid file<LineBreak/>
+				Control - S - save grid file<LineBreak/>
+				<LineBreak/>
+			</TextBlock>
+		</StackPanel>
+	</ScrollViewer>
+</Border>

@@ -13,7 +13,7 @@ trim_trailing_whitespace = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{cs,xaml}]
+[*.{cs,xaml,axaml}]
 indent_style = tab
 indent_size = 2
 insert_final_newline = true
