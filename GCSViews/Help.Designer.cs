@@ -82,7 +82,6 @@ namespace MissionPlanner.GCSViews
 			this.Name = "Help";
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 
 		#endregion

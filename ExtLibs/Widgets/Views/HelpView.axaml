@@ -15,7 +15,7 @@
 			</Style>
 		</ScrollViewer.Styles>
 		<StackPanel>
-			<TextBlock>
+			<SelectableTextBlock>
 				Welcome to the <Run FontWeight="Bold">Mission Planner</Run>, mission planning for
 				Unmanned Aerial Vehicles <Run FontWeight="Bold">(UAV)</Run>.
 				<LineBreak/>
@@ -80,7 +80,7 @@
 				Control - O - open grid file<LineBreak/>
 				Control - S - save grid file<LineBreak/>
 				<LineBreak/>
-			</TextBlock>
+			</SelectableTextBlock>
 		</StackPanel>
 	</ScrollViewer>
 </Border>

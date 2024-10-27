@@ -55,7 +55,10 @@ namespace MissionPlanner.GCSViews
 
 		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			Process.Start("https://firmware.ardupilot.org/Tools/MissionPlanner/upgrade/ChangeLog.txt");
+			Process.Start(new ProcessStartInfo("https://firmware.ardupilot.org/Tools/MissionPlanner/upgrade/ChangeLog.txt")
+			{
+				UseShellExecute = true
+			});
 		}
 
 		private void BUT_betaupdate_Click(object sender, EventArgs e)
