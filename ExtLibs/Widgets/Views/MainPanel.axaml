@@ -13,69 +13,100 @@
   </Design.DataContext>
 
 	<StackPanel Orientation="Horizontal">
+		<StackPanel.Styles>
+			<Style Selector="Button.MainPanelButton">
+				<Setter Property="VerticalAlignment" Value="Stretch" />
+				<Setter Property="HorizontalAlignment" Value="Stretch" />
+				<Setter Property="Padding" Value="0" />
+			</Style>
+			<Style Selector="StackPanel.ButtonContentContainer">
+				<Setter Property="VerticalAlignment" Value="Stretch" />
+				<Setter Property="Margin" Value="5,0" />
+			</Style>
+			<Style Selector="Image.MainPanelButtonIcon">
+				<Setter Property="HorizontalAlignment" Value="Center" />
+				<Setter Property="Stretch" Value="Uniform" />
+				<Setter Property="MaxHeight" Value="32" />
+			</Style>
+			<Style Selector="TextBlock.MainPanelButtonLabel">
+				<Setter Property="HorizontalAlignment" Value="Center" />
+			</Style>
+		</StackPanel.Styles>
 		<Button
-			HorizontalAlignment="Center"
-			VerticalAlignment="Center"
+			Classes="MainPanelButton"
 			Command="{Binding OpenDataPage}"
 		>
-			<StackPanel>
-				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
-				<TextBlock Text="Data"/>
+			<StackPanel Classes="ButtonContentContainer">
+				<Image
+					Source="avares://Widgets/Assets/Images/DataButtonIcon.png"
+					Classes="MainPanelButtonIcon"
+				/>
+				<TextBlock Text="Data" Classes="MainPanelButtonLabel"/>
 			</StackPanel>
 		</Button>
 
 		<Button
-			HorizontalAlignment="Center"
-			VerticalAlignment="Center"
+			Classes="MainPanelButton"
 			Command="{Binding OpenPlanPage}"
 		>
-			<StackPanel>
-				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
-				<TextBlock Text="Plan"/>
+			<StackPanel Classes="ButtonContentContainer">
+				<Image
+					Source="avares://Widgets/Assets/Images/PlanButtonIcon.png"
+					Classes="MainPanelButtonIcon"
+				/>
+				<TextBlock Text="Plan" Classes="MainPanelButtonLabel"/>
 			</StackPanel>
 		</Button>
 
 		<Button
-			HorizontalAlignment="Center"
-			VerticalAlignment="Center"
+			Classes="MainPanelButton"
 			Command="{Binding OpenSetupPage}"
 		>
-			<StackPanel>
-				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
-				<TextBlock Text="Setup"/>
+			<StackPanel Classes="ButtonContentContainer">
+				<Image
+					Source="avares://Widgets/Assets/Images/SetupButtonIcon.png"
+					Classes="MainPanelButtonIcon"
+				/>
+				<TextBlock Text="Setup" Classes="MainPanelButtonLabel"/>
 			</StackPanel>
 		</Button>
 
 		<Button
-			HorizontalAlignment="Center"
-			VerticalAlignment="Center"
+			Classes="MainPanelButton"
 			Command="{Binding OpenConfigPage}"
 		>
-			<StackPanel>
-				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
-				<TextBlock Text="Config"/>
+			<StackPanel Classes="ButtonContentContainer">
+				<Image
+					Source="avares://Widgets/Assets/Images/ConfigButtonIcon.png"
+					Classes="MainPanelButtonIcon"
+				/>
+				<TextBlock Text="Config" Classes="MainPanelButtonLabel"/>
 			</StackPanel>
 		</Button>
 
 		<Button
-			HorizontalAlignment="Center"
-			VerticalAlignment="Center"
+			Classes="MainPanelButton"
 			Command="{Binding OpenSimulationPage}"
 		>
-			<StackPanel>
-				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
-				<TextBlock Text="Simulation"/>
+			<StackPanel Classes="ButtonContentContainer">
+				<Image
+					Source="avares://Widgets/Assets/Images/SimulationButtonIcon.png"
+					Classes="MainPanelButtonIcon"
+				/>
+				<TextBlock Text="Simulation" Classes="MainPanelButtonLabel"/>
 			</StackPanel>
 		</Button>
 
 		<Button
-			HorizontalAlignment="Center"
-			VerticalAlignment="Center"
+			Classes="MainPanelButton"
 			Command="{Binding OpenHelpPage}"
 		>
-			<StackPanel>
-				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
-				<TextBlock Text="Help"/>
+			<StackPanel Classes="ButtonContentContainer">
+				<Image
+					Source="avares://Widgets/Assets/Images/HelpButtonIcon.png"
+					Classes="MainPanelButtonIcon"
+				/>
+				<TextBlock Text="Help" Classes="MainPanelButtonLabel"/>
 			</StackPanel>
 		</Button>
 	</StackPanel>
