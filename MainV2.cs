@@ -705,6 +705,73 @@ namespace MissionPlanner
 			{
 				DataContext = new Widgets.ViewModels.MainPanelModel
 				{
+					DataButtonClickHandler = () =>
+					{
+						MyView.ShowScreen("FlightData");
+
+						// save config
+						SaveConfig();
+					},
+					PlanButtonClickHandler = () =>
+					{
+						MyView.ShowScreen("FlightPlanner");
+
+						// save config
+						SaveConfig();
+					},
+					SetupButtonClickHandler = () =>
+					{
+						if (Settings.Instance.GetBoolean("password_protect") == false)
+						{
+							MyView.ShowScreen("HWConfig");
+						}
+						else
+						{
+							var pw = "";
+							if (InputBox.Show("Enter Password", "Please enter your password", ref pw, true) ==
+									System.Windows.Forms.DialogResult.OK)
+							{
+								bool ans = Password.ValidatePassword(pw);
+
+								if (ans == false)
+								{
+									CustomMessageBox.Show("Bad Password", "Bad Password");
+								}
+							}
+
+							if (Password.VerifyPassword(pw))
+							{
+								MyView.ShowScreen("HWConfig");
+							}
+						}
+					},
+					ConfigButtonClickHandler = () =>
+					{
+						if (Settings.Instance.GetBoolean("password_protect") == false)
+						{
+							MyView.ShowScreen("SWConfig");
+						}
+						else
+						{
+							var pw = "";
+							if (InputBox.Show("Enter Password", "Please enter your password", ref pw, true) ==
+									System.Windows.Forms.DialogResult.OK)
+							{
+								bool ans = Password.ValidatePassword(pw);
+
+								if (ans == false)
+								{
+									CustomMessageBox.Show("Bad Password", "Bad Password");
+								}
+							}
+
+							if (Password.VerifyPassword(pw))
+							{
+								MyView.ShowScreen("SWConfig");
+							}
+						}
+					},
+					SimulationButtonClickHandler = () => MyView.ShowScreen("Simulation"),
 					HelpButtonClickHandler = () => MyView.ShowScreen("Help")
 				}
 			};

@@ -181,7 +181,6 @@ namespace MissionPlanner
 			resources.ApplyResources(this.WinFormsAvaloniaControlHost, "WinFormsAvaloniaControlHost");
 			this.WinFormsAvaloniaControlHost.Margin = new System.Windows.Forms.Padding(0);
 			this.WinFormsAvaloniaControlHost.Name = "WinFormsAvaloniaControlHost";
-			this.WinFormsAvaloniaControlHost.Click += new System.EventHandler(this.MenuHelp_Click);
 			//
 			// MenuConnect
 			//

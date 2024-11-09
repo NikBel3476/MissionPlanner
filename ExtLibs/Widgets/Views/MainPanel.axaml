@@ -12,11 +12,71 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
-  <Button
-		HorizontalAlignment="Center"
-		VerticalAlignment="Center"
-		Command="{Binding OpenHelpPage}"
-	>
-		Help
-	</Button>
+	<StackPanel Orientation="Horizontal">
+		<Button
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Command="{Binding OpenDataPage}"
+		>
+			<StackPanel>
+				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
+				<TextBlock Text="Data"/>
+			</StackPanel>
+		</Button>
+
+		<Button
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Command="{Binding OpenPlanPage}"
+		>
+			<StackPanel>
+				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
+				<TextBlock Text="Plan"/>
+			</StackPanel>
+		</Button>
+
+		<Button
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Command="{Binding OpenSetupPage}"
+		>
+			<StackPanel>
+				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
+				<TextBlock Text="Setup"/>
+			</StackPanel>
+		</Button>
+
+		<Button
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Command="{Binding OpenConfigPage}"
+		>
+			<StackPanel>
+				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
+				<TextBlock Text="Config"/>
+			</StackPanel>
+		</Button>
+
+		<Button
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Command="{Binding OpenSimulationPage}"
+		>
+			<StackPanel>
+				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
+				<TextBlock Text="Simulation"/>
+			</StackPanel>
+		</Button>
+
+		<Button
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Command="{Binding OpenHelpPage}"
+		>
+			<StackPanel>
+				<!-- <Image Source="/Assets/HelpButtonIcon.png"/> -->
+				<TextBlock Text="Help"/>
+			</StackPanel>
+		</Button>
+	</StackPanel>
 </Border>
