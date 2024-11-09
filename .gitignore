@@ -43,3 +43,7 @@ docs/
 *.pem
 *.key
 /.vscode
+Drivers/DriverCleanup*.json
+Drivers/DriverCleanup.dll*
+Drivers/Microsoft.Windows.SDK.NET.dll
+Drivers/WinRT.Runtime.dll
