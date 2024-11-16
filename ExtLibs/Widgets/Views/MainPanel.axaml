@@ -109,5 +109,18 @@
 				<TextBlock Text="Help" Classes="MainPanelButtonLabel"/>
 			</StackPanel>
 		</Button>
+
+		<Button
+			Classes="MainPanelButton"
+			Command="{Binding OpenArdupilotWebpage}"
+		>
+			<StackPanel Classes="ButtonContentContainer">
+				<Image
+					Source="avares://Widgets/Assets/Images/ardupilot_logo.png"
+					Classes="MainPanelButtonIcon"
+					MinWidth="250"
+				/>
+			</StackPanel>
+		</Button>
 	</StackPanel>
 </Border>

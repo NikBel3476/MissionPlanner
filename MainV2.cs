@@ -772,7 +772,21 @@ namespace MissionPlanner
 						}
 					},
 					SimulationButtonClickHandler = () => MyView.ShowScreen("Simulation"),
-					HelpButtonClickHandler = () => MyView.ShowScreen("Help")
+					HelpButtonClickHandler = () => MyView.ShowScreen("Help"),
+					ArdupilotButtonClickHandler = () =>
+					{
+						try
+						{
+							System.Diagnostics.Process.Start(new ProcessStartInfo("https://ardupilot.org/?utm_source=Menu&utm_campaign=MP")
+							{
+								UseShellExecute = true
+							});
+						}
+						catch
+						{
+							CustomMessageBox.Show("Failed to open url https://ardupilot.org");
+						}
+					}
 				}
 			};
 

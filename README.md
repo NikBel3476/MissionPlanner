@@ -27,7 +27,8 @@ Visual Studio 2022
 
 ##### Command line
 From project directory run:
-`dotnet build MissionPlanner.csproj -c Release -f net8.0-windows10.0.19041`
+build command: `dotnet build MissionPlanner.csproj -c Release -f net8.0-windows10.0.19041.0`  
+run command: `dotnet run --project MissionPlanner.csproj -c Release -f net8.0-windows10.0.19041.0`
 
 ##### IDE
 

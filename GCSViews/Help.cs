@@ -1,4 +1,4 @@
-﻿using MissionPlanner.Controls;
+using MissionPlanner.Controls;
 using MissionPlanner.Properties;
 using MissionPlanner.Utilities;
 using System;
@@ -12,7 +12,63 @@ namespace MissionPlanner.GCSViews
 		public Help()
 		{
 			InitializeComponent();
-			winFormsAvaloniaControlHost.Content = new Widgets.Views.HelpView { };
+			winFormsAvaloniaControlHost.Content = new Widgets.Views.HelpView
+			{
+				DataContext = new Widgets.ViewModels.HelpViewModel
+				{
+					CheckUpdatesButtonClickHandler = () =>
+					{
+						try
+						{
+							if (Program.WindowsStoreApp)
+							{
+								return;
+							}
+							Utilities.Update.CheckForUpdate(true);
+						}
+						catch (Exception ex)
+						{
+							CustomMessageBox.Show(ex.ToString(), Strings.ERROR);
+						}
+					},
+					CheckBetaUpdatesButtonClickHandler = () =>
+					{
+						try
+						{
+							Utilities.Update.dobeta = true;
+							if (Control.ModifierKeys == Keys.Control)
+							{
+								Utilities.Update.domaster = true;
+								CustomMessageBox.Show("This will update to MASTER release");
+							}
+
+							Utilities.Update.DoUpdate();
+						}
+						catch (Exception ex)
+						{
+							CustomMessageBox.Show(ex.ToString(), Strings.ERROR);
+						}
+					},
+					ChangeLogClickHandler = () =>
+					{
+						try
+						{
+							Process.Start(new ProcessStartInfo("https://firmware.ardupilot.org/Tools/MissionPlanner/upgrade/ChangeLog.txt")
+							{
+								UseShellExecute = true
+							});
+						}
+						catch
+						{
+							CustomMessageBox.Show("Failed to open changelog");
+						}
+					},
+					ShowConsoleCheckboxClickHandler = (bool checkedValue) =>
+					{
+						Settings.Instance["showconsole"] = checkedValue.ToString();
+					}
+				}
+			};
 		}
 
 		public void Activate()

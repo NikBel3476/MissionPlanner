@@ -714,7 +714,7 @@
     <value>Magenta</value>
   </data>
   <data name="WinFormsAvaloniaControlHost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 47</value>
+    <value>1000, 47</value>
   </data>
   <data name="WinFormsAvaloniaControlHost.Text" xml:space="preserve">
     <value>HELP</value>
@@ -957,7 +957,7 @@
     <value>0, 0</value>
   </data>
   <data name="MainMenu.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>300, 0, 0, 0</value>
+    <value>1000, 0, 0, 0</value>
   </data>
   <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>923, 47</value>

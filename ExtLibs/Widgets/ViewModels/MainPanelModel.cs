@@ -36,6 +36,11 @@ public class MainPanelModel : ViewModelBase
 		HelpButtonClickHandler();
 	});
 
+	public ICommand OpenArdupilotWebpage => ReactiveCommand.Create(() =>
+	{
+		ArdupilotButtonClickHandler();
+	});
+
 	// MainV2 handlers
 	public delegate void ButtonHandler();
 
@@ -45,5 +50,5 @@ public class MainPanelModel : ViewModelBase
 	public required ButtonHandler ConfigButtonClickHandler;
 	public required ButtonHandler SimulationButtonClickHandler;
 	public required ButtonHandler HelpButtonClickHandler;
-
+	public required ButtonHandler ArdupilotButtonClickHandler;
 }
