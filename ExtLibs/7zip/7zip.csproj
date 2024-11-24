@@ -25,8 +25,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="obj\**" />
+    <None Remove="bin\**" />
     <None Include="Compress\LzmaAlone\Properties\AssemblyInfo.cs" />
     <None Include="Compress\LzmaAlone\Properties\Settings.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="obj\**" />
+    <EmbeddedResource Remove="bin\**" />
   </ItemGroup>
 
   <ItemGroup>
