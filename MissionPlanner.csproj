@@ -118,56 +118,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ExtLibs\7zip\7zip.csproj" />
-    <ProjectReference Include="ExtLibs\alglibnet\alglibnet.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\7zip\7zip.csproj" /> -->
+    <!-- <ProjectReference Include="ExtLibs\alglibnet\alglibnet.csproj" /> -->
     <ProjectReference Include="ExtLibs\Antenna\MissionPlanner.Antenna.csproj" />
     <ProjectReference Include="ExtLibs\Arduino\Arduino.csproj" />
     <ProjectReference Include="ExtLibs\ArduPilot\MissionPlanner.ArduPilot.csproj" />
     <ProjectReference Include="ExtLibs\AviFile\AviFile.csproj" />
     <ProjectReference Include="ExtLibs\BaseClasses\BaseClasses.csproj" />
-    <ProjectReference Include="ExtLibs\BSE.Windows.Forms\BSE.Windows.Forms.csproj" />
-    <ProjectReference Include="ExtLibs\Comms\MissionPlanner.Comms.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\BSE.Windows.Forms\BSE.Windows.Forms.csproj" /> -->
+    <!-- <ProjectReference Include="ExtLibs\Comms\MissionPlanner.Comms.csproj" /> -->
     <ProjectReference Include="ExtLibs\Controls\MissionPlanner.Controls.csproj" />
-    <ProjectReference Include="ExtLibs\Core\Core.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\Core\Core.csproj" /> -->
     <ProjectReference Include="ExtLibs\DirectShowLib\DirectShowLib.csproj" />
     <ProjectReference Include="ExtLibs\GDAL\GDAL.NET.csproj" />
-    <ProjectReference Include="ExtLibs\GeoUtility\GeoUtility.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\GeoUtility\GeoUtility.csproj" /> -->
     <ProjectReference Include="ExtLibs\GMap.NET.Core\GMap.NET.Core.csproj" />
-    <ProjectReference Include="ExtLibs\GMap.NET.Drawing\GMap.NET.Drawing.csproj" />
-    <ProjectReference Include="ExtLibs\GMap.NET.WindowsForms\GMap.NET.WindowsForms.csproj" />
-    <ProjectReference Include="ExtLibs\HIL\MissionPlanner.HIL.csproj" />
-    <ProjectReference Include="ExtLibs\ICSharpCode.SharpZipLib\ICSharpCode.SharpZipLib.csproj" />
-    <ProjectReference Include="ExtLibs\Interfaces\Interfaces.csproj" />
-    <ProjectReference Include="ExtLibs\KMLib\KMLib.csproj" />
-    <ProjectReference Include="ExtLibs\LibTessDotNet\LibTessDotNet.csproj" />
-    <ProjectReference Include="ExtLibs\LibVLC.NET\LibVLC.NET.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\GMap.NET.Drawing\GMap.NET.Drawing.csproj" /> -->
+    <!-- <ProjectReference Include="ExtLibs\GMap.NET.WindowsForms\GMap.NET.WindowsForms.csproj" /> -->
+    <!-- <ProjectReference Include="ExtLibs\HIL\MissionPlanner.HIL.csproj" /> -->
+    <!-- <ProjectReference Include="ExtLibs\ICSharpCode.SharpZipLib\ICSharpCode.SharpZipLib.csproj" /> -->
+    <!-- <ProjectReference Include="ExtLibs\Interfaces\Interfaces.csproj" /> -->
+    <!-- <ProjectReference Include="ExtLibs\KMLib\KMLib.csproj" /> -->
+    <!-- <ProjectReference Include="ExtLibs\LibTessDotNet\LibTessDotNet.csproj" /> -->
+    <!-- <ProjectReference Include="ExtLibs\LibVLC.NET\LibVLC.NET.csproj" /> -->
     <ProjectReference Include="ExtLibs\ManagedNativeWifi.Simple\ManagedNativeWifi.Simple.csproj" />
     <ProjectReference Include="ExtLibs\Maps\MissionPlanner.Maps.csproj" />
     <ProjectReference Include="ExtLibs\Mavlink\MAVLink.csproj" />
-    <ProjectReference Include="ExtLibs\MetaDataExtractorCSharp240d\MetaDataExtractor.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\MetaDataExtractorCSharp240d\MetaDataExtractor.csproj" /> -->
     <ProjectReference Include="ExtLibs\MissionPlanner.Drawing\MissionPlanner.Drawing.csproj">
       <Aliases>Drawing</Aliases>
     </ProjectReference>
-    <ProjectReference Include="ExtLibs\netDxf\netDxf.csproj" />
-    <ProjectReference Include="ExtLibs\Onvif\Onvif.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\netDxf\netDxf.csproj" /> -->
+    <!-- <ProjectReference Include="ExtLibs\Onvif\Onvif.csproj" /> -->
     <ProjectReference Include="ExtLibs\OSDConfigurator\OSDConfigurator.csproj" />
-    <ProjectReference Include="ExtLibs\ProjNet\ProjNET.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\ProjNet\ProjNET.csproj" /> -->
     <ProjectReference Include="ExtLibs\px4uploader\px4uploader.csproj" />
     <ProjectReference Include="ExtLibs\SharpAdbClient\SharpAdbClient.csproj" />
-    <ProjectReference Include="ExtLibs\SharpKml\SharpKml.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\SharpKml\SharpKml.csproj" /> -->
     <ProjectReference Include="ExtLibs\solo\solo.csproj" />
-    <ProjectReference Include="ExtLibs\Strings\MissionPlanner.Strings.csproj" />
-    <ProjectReference Include="ExtLibs\SvgNet\SvgNet.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\Strings\MissionPlanner.Strings.csproj" /> -->
+    <!-- <ProjectReference Include="ExtLibs\SvgNet\SvgNet.csproj" /> -->
     <ProjectReference Include="ExtLibs\tlogThumbnailHandler\tlogThumbnailHandler.csproj" />
     <ProjectReference Include="ExtLibs\Transitions\Transitions.csproj" />
     <ProjectReference Include="ExtLibs\DroneCAN\DroneCAN.csproj" />
-    <ProjectReference Include="ExtLibs\Utilities\MissionPlanner.Utilities.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\Utilities\MissionPlanner.Utilities.csproj" /> -->
     <ProjectReference Include="ExtLibs\WebAPIs\MissionPlanner.WebAPIs.csproj" />
     <ProjectReference Include="ExtLibs\WebCamService\WebCamService.csproj" />
     <ProjectReference Include="ExtLibs\Widgets\Widgets.csproj" />
     <ProjectReference Include="ExtLibs\Xamarin.Forms.Platform.WinForms\Xamarin.Forms.Platform.WinForms.csproj" />
     <ProjectReference Include="ExtLibs\ZedGraph\ZedGraph.csproj" />
-    <ProjectReference Include="ExtLibs\Zeroconf\Zeroconf\Zeroconf.csproj" />
+    <!-- <ProjectReference Include="ExtLibs\Zeroconf\Zeroconf\Zeroconf.csproj" /> -->
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Accord.Imaging">
