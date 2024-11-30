@@ -18,5 +18,5 @@ indent_style = tab
 indent_size = 2
 insert_final_newline = true
 
-[*.{yml, yaml}]
+[*.{yml,yaml,csproj}]
 indent_size = 2
