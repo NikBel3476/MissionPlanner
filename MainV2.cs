@@ -1,4 +1,4 @@
-﻿#if !LIB
+#if !LIB
 extern alias Drawing;
 #endif
 

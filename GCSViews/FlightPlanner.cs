@@ -5178,12 +5178,22 @@ namespace MissionPlanner.GCSViews
                 {
                     if (((Style)style).Line != null)
                     {
-                        int color = ((Style)style).Line.Color.Value.Abgr;
-                        // convert color from ABGR to ARGB
-                        color = (int)((color & 0xFF00FF00) | ((color & 0x00FF0000) >> 16) | ((color & 0x000000FF) << 16));
+                        int color;
+                        if (((Style)style).Line.Color != null)
+                        {
+                            color = ((Style)style).Line.Color.Value.Abgr;
+                            color = (int)((color & 0xFF00FF00) | ((color & 0x00FF0000) >> 16) | ((color & 0x000000FF) << 16));
 
-                        // ABGR
-                        return (Color.FromArgb(color), (int)((Style)style).Line.Width.Value);
+                        }
+                        else color = Color.White.ToArgb();
+                        // convert color from ABGR to ARGB
+
+                        if (((Style)style).Line.Width != null)
+                        {
+                            return (Color.FromArgb(color), (int)((Style)style).Line.Width.Value);
+                        }
+                        else
+                            return (Color.FromArgb(color), 2);
                     }
                 }
             }
