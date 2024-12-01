@@ -56,12 +56,13 @@
     <WarningsAsErrors>$(WarningsAsErrors);</WarningsAsErrors>
   </PropertyGroup> -->
   <ItemGroup>
+    <Compile Remove="resedit\**" />
+    <EmbeddedResource Remove="resedit\**" />
     <Compile Remove="APMPlannerXplanes\**" />
     <Compile Remove="ExtLibs\**" />
     <Compile Remove="MissionPlannerTests\**" />
     <Compile Remove="Msi\**" />
     <Compile Remove="plugins\**" />
-    <Compile Remove="resedit\**" />
     <Compile Remove="SikRadio\**" />
     <Compile Remove="Updater\**" />
     <Compile Remove="wix\**" />
@@ -70,7 +71,6 @@
     <EmbeddedResource Remove="MissionPlannerTests\**" />
     <EmbeddedResource Remove="Msi\**" />
     <EmbeddedResource Remove="plugins\**" />
-    <EmbeddedResource Remove="resedit\**" />
     <EmbeddedResource Remove="SikRadio\**" />
     <EmbeddedResource Remove="Updater\**" />
     <EmbeddedResource Remove="wix\**" />
@@ -79,7 +79,6 @@
     <None Remove="MissionPlannerTests\**" />
     <None Remove="Msi\**" />
     <None Remove="plugins\**" />
-    <None Remove="resedit\**" />
     <None Remove="SikRadio\**" />
     <None Remove="Updater\**" />
     <None Remove="wix\**" />
@@ -96,7 +95,7 @@
     <Compile Remove="ExtLibs\Widgets\Assets\**" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="BitMiracle.LibTiff.NetStandard">
+    <!-- <Reference Include="BitMiracle.LibTiff.NetStandard">
       <HintPath>.\extlibs\BitMiracle.LibTiff.NetStandard.dll</HintPath>
       <Private>true</Private>
     </Reference>
@@ -115,7 +114,7 @@
     <Reference Include="Updater, Version=1.0.7056.19890, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>Updater\bin\Release\Updater.exe</HintPath>
       <SpecificVersion>False</SpecificVersion>
-    </Reference>
+    </Reference> -->
   </ItemGroup>
   <ItemGroup>
     <!-- <ProjectReference Include="ExtLibs\7zip\7zip.csproj" /> -->
@@ -274,7 +273,7 @@
 		<!--<PackageReference Include="CoreCompat.System.Drawing" Version="1.0.0-beta006"/>-->
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Controls\DroneCANSubscriber.cs">
+    <!-- <Compile Update="Controls\DroneCANSubscriber.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Controls\ControlSensorsStatus.cs">
@@ -360,8 +359,8 @@
     </Compile>
     <Compile Update="Joystick\JoystickAxis.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <None Update="Drivers\amd64\WdfCoInstaller01009.dll">
+    </Compile> -->
+    <!-- <None Update="Drivers\amd64\WdfCoInstaller01009.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Drivers\amd64\winusbcoinstaller2.dll">
@@ -373,7 +372,7 @@
     <None Include="plugins\example10-canlogfile.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <!--<None Include="plugins\example11-trace.cs">
+    <None Include="plugins\example11-trace.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="plugins\example12-forwarding.cs">
@@ -381,7 +380,7 @@
     </None>
     <None Include="plugins\example13-herelink2.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>-->
+    </None>
     <None Include="plugins\example14-mass.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -411,11 +410,11 @@
     </None>
     <None Include="plugins\example22-payloadconfig.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <Compile Update="Utilities\AirMarket.cs">
+    </None> -->
+    <!-- <Compile Update="Utilities\AirMarket.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <!--<None Include="plugins\example2-menu.cs">
+    </Compile> -->
+    <!-- <None Include="plugins\example2-menu.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="plugins\example3-fencedist.cs">
@@ -435,12 +434,12 @@
     </None>
     <None Include="plugins\example8-modechange.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="plugins\generator.cs">
+    </None> -->
+    <!-- <None Include="plugins\generator.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>UserControl</SubType>
-    </None>
-    <None Include="plugins\example.cs">
+    </None> -->
+    <!-- <None Include="plugins\example.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="plugins\example2.cs">
@@ -466,8 +465,8 @@
     </None>
     <None Include="plugins\example9-hudonoff.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>-->
-    <Compile Update="Controls\OpenGLtest.cs">
+    </None> -->
+    <!-- <Compile Update="Controls\OpenGLtest.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Controls\OpenGLtest2.cs">
@@ -685,10 +684,10 @@
     </Compile>
     <Compile Update="Warnings\WarningControl.cs">
       <SubType>UserControl</SubType>
-    </Compile>
+    </Compile> -->
   </ItemGroup>
   <ItemGroup>
-    <Content Include="acsimplepids.xml">
+    <!-- <Content Include="acsimplepids.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="aircraft.xml">
@@ -706,9 +705,9 @@
     <Content Include="rotmat.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <!--<None Include="plugins\example-watchbutton.cs">
+    <None Include="plugins\example-watchbutton.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>-->
+    </None>
     <None Update="BurntKermit.mpsystheme">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -760,9 +759,9 @@
     <Content Include="Drivers\devcon.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <!-- <Content Include="Drivers\DriverCleanup.exe">
+    <Content Include="Drivers\DriverCleanup.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content> -->
+    </Content>
     <Content Include="Drivers\Holybro.inf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1044,12 +1043,12 @@
     </None>
     <None Update="version.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </None> -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="**/*.Designer.cs">
+    <!-- <Compile Update="**/*.Designer.cs">
       <DependentUpon Condition="Exists($([System.String]::Copy('%(Filename)').ToLower().Replace('.designer','.cs')))">$([System.Text.RegularExpressions.Regex]::Replace('%(FileName)', '\.[a-zA-Z\-]+', '')).cs</DependentUpon>
-    </Compile>
+    </Compile> -->
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="&quot;$(TargetDir)version.exe&quot; &quot;$(TargetPath)&quot; &gt; &quot;$(TargetDir)version.txt&quot;&#xD;&#xA;copy &quot;$(ProjectDir)ExtLibs\System.Speech.dll&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;&#xD;&#xA;cd &quot;$(TargetDir)&quot;&#xD;&#xA;for /f %%f in ('dir /a-d /b plugins') do if exist .\%%f del .\plugins\%%f&#xD;&#xA;" />
@@ -1058,19 +1057,19 @@
     <Exec Command="echo $(TargetDir)&#xD;&#xA;" />
   </Target>
   <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
+    <!-- <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    </Compile> -->
   </ItemGroup>
   <ItemGroup>
-    <None Update="C:\Users\hog\.nuget\packages\skiasharp\1.59.3\build\net45\..\..\runtimes\win7-x64\native\libSkiaSharp.dll">
+    <!-- <None Update="C:\Users\hog\.nuget\packages\skiasharp\1.59.3\build\net45\..\..\runtimes\win7-x64\native\libSkiaSharp.dll">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
+    </None> -->
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+    <!-- <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
       <Install>true</Install>
@@ -1079,7 +1078,7 @@
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
-    </BootstrapperPackage>
+    </BootstrapperPackage> -->
   </ItemGroup>
 
   <ItemGroup>
@@ -1090,7 +1089,7 @@
     <PackageReference Include="System.Management" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="plugins\example-watchbutton.cs" />
+    <!-- <Compile Remove="plugins\example-watchbutton.cs" />
     <Compile Remove="plugins\example.cs" />
     <Compile Remove="plugins\example10-canlogfile.cs" />
     <Compile Remove="plugins\example11-trace.cs" />
@@ -1122,12 +1121,6 @@
     <Compile Remove="plugins\example9-hudonoff.cs" />
     <Compile Remove="plugins\generator.cs" />
     <Compile Remove="plugins\InitialParamsCalculator.cs" />
-    <Compile Remove="resedit\**\*.*" />
-    <Compile Remove="resedit\Form1.Designer.cs" />
-    <Compile Remove="resedit\Program.cs" />
-    <Compile Remove="resedit\Properties\AssemblyInfo.cs" />
-    <Compile Remove="resedit\Properties\Resources.Designer.cs" />
-    <Compile Remove="resedit\Properties\Settings.Designer.cs" />
     <Compile Remove="SikRadio\Common.cs" />
     <Compile Remove="SikRadio\ComPort.cs" />
     <Compile Remove="SikRadio\Config.cs" />
@@ -1187,7 +1180,7 @@
     <Compile Remove="wix\obj\Test\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Remove="wix\obj\Test\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Remove="wix\Program.cs" />
-    <Compile Remove="wix\Properties\AssemblyInfo.cs" />
+    <Compile Remove="wix\Properties\AssemblyInfo.cs" /> -->
     <Compile Remove="ZZZLibShims.cs" />
 
   </ItemGroup>

@@ -7,7 +7,7 @@
     <DebugSymbols>true</DebugSymbols>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <RootNamespace>MissionPlanner</RootNamespace>
-    <NeutralLanguage>en</NeutralLanguage>   
+    <NeutralLanguage>en</NeutralLanguage>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Deterministic>false</Deterministic>
     <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
@@ -111,7 +111,6 @@
     <Compile Remove="Msi\**" />
     <Compile Remove="Plugins\**" />
     <Compile Remove="plugins\Dowding\**" />
-    <Compile Remove="resedit\**" />
     <Compile Remove="SikRadio\**" />
     <Compile Remove="Updater\**" />
     <Compile Remove="Utilities\AltitudeAngel\**" />
@@ -208,7 +207,6 @@
     <EmbeddedResource Remove="Msi\**" />
     <EmbeddedResource Remove="Plugins\**" />
     <EmbeddedResource Remove="plugins\Dowding\**" />
-    <EmbeddedResource Remove="resedit\**" />
     <EmbeddedResource Remove="SikRadio\**" />
     <EmbeddedResource Remove="Updater\**" />
     <EmbeddedResource Remove="Utilities\AltitudeAngel\**" />
@@ -304,26 +302,25 @@
     <None Remove="Msi\**" />
     <None Remove="Plugins\**" />
     <None Remove="plugins\Dowding\**" />
-    <None Remove="resedit\**" />
     <None Remove="SikRadio\**" />
     <None Remove="Updater\**" />
     <None Remove="Utilities\AltitudeAngel\**" />
     <None Remove="wix\**" />
 
-    <Compile Remove="ExtLibs\runtime\**" />   
+    <Compile Remove="ExtLibs\runtime\**" />
 
-    <EmbeddedResource Remove="ExtLibs\runtime\**" />  
+    <EmbeddedResource Remove="ExtLibs\runtime\**" />
 
     <None Remove="ExtLibs\runtime\**" />
 
-    <Compile Remove="**\bin\**" />   
+    <Compile Remove="**\bin\**" />
 
-    <EmbeddedResource Remove="**\bin\**" />  
+    <EmbeddedResource Remove="**\bin\**" />
 
     <None Remove="**\bin\**" />
-    <Compile Remove="**\obj\**" />   
+    <Compile Remove="**\obj\**" />
 
-    <EmbeddedResource Remove="**\obj\**" />  
+    <EmbeddedResource Remove="**\obj\**" />
 
     <None Remove="**\obj\**" />
     <Compile Remove=".git\**" />
@@ -499,7 +496,7 @@
    <PackageReference Include="TimeZoneConverter" Version="3.2.0" />
    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
-    <PackageReference Include="SSH.NET" version="2020.0.2" /> 
+    <PackageReference Include="SSH.NET" version="2020.0.2" />
 	 <PackageReference Include="SharpDX" version="4.1.0" />
     <PackageReference Include="SharpDX.DirectInput" version="4.1.0" />
     <PackageReference Include="SkiaSharp" Version="2.80.2" /> <PackageReference Include="Crc32.NET">
@@ -518,7 +515,7 @@
     <PackageReference Include="Microsoft.Diagnostics.Runtime">
       <Version>1.1.127808</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.Win32.Registry" Version="4.7.0" /> <PackageReference Include="Autofac" Version="4.9.4" /> 
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.7.0" /> <PackageReference Include="Autofac" Version="4.9.4" />
     <PackageReference Include="GeoJSON.Net">
       <Version>1.1.64</Version>
     </PackageReference>
@@ -566,7 +563,7 @@
    <ProjectReference Include="ExtLibs\WebAPIs\MissionPlanner.WebAPIs.csproj" />
    <ProjectReference Include="ExtLibs\ZedGraph\ZedGraph.csproj" />
    <ProjectReference Include="ExtLibs\Zeroconf\Zeroconf\Zeroconf.csproj" />
- </ItemGroup> 
+ </ItemGroup>
   <ItemGroup>
     <Compile Update="ExtLibs\ObjectListView\Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -578,7 +575,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-  </ItemGroup> 
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="ExtLibs\ObjectListView\Properties\Resources.resx">
       <CustomToolNamespace>BrightIdeasSoftware.Properties</CustomToolNamespace>
@@ -590,7 +587,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup> 
+  </ItemGroup>
   <ItemGroup>
     <None Update="acsimplepids.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
